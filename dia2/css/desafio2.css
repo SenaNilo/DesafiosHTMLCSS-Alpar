@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Poppins', sans-serif;
+}
+
+nav.voltar{
+    width: 100%;
+    background-color: beige;
+    padding: 5px;
+}
+nav.voltar a{
+    color: black;   
+}
+
+/* Banner inicial */
+header.banner{
+    background: url("../img/coffeeBanner.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 98vh;    
+}
+
+header.banner div.banner-content{
+    padding: 50px;
+    font-size: large;
+    width: 100%;
+    height: 100%;
+    background-color: #00000091;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    color: whitesmoke;
+} 
+
+section{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+section img{
+    width: 50%;
+}
+section div{
+    font-size: large;
+    width: 50%;
+    padding: 50px;
+}
+section div h2{
+    margin-bottom: 10px;
+}
+section div ul{
+    margin-left: 30px;
+}
+section div ul li{
+    margin-bottom: 3px;
+}
+/* Sessão bebidas */
+section.bebidas{
+    background-color: #594126;
+    color: whitesmoke;
+}
+
+/* Sessão Salgados */
+section.salgados{
+    flex-direction: row-reverse;
+    background-color: #D9CCBD;
+}
+
+/* Sessão Doces */
+section.doces{
+    background-color: #513B23;
+    color: whitesmoke;
+}
+section.doces div ol{
+    margin-left: 30px;
+}
+section.doces div ol li{
+    margin-bottom: 3px;
+}
