@@ -40,6 +40,15 @@ header.banner div.banner-content{
     color: whitesmoke;
 } 
 
+header.banner div.banner-content p{
+    width: 50%;
+}
+header.banner div.banner-content img{
+    width: 600px;
+    position: absolute;
+    right: 0;
+}
+
 section{
     display: flex;
     width: 100%;
