@@ -16,6 +16,12 @@
         dados que serão exibidos, e na estrutura em HTML.
         Envie para o GitHub junto com o seu portifólio
      -->
+
+     <!-- Desafio 3
+        Na página da cafeteria, do desafio anterior, acrescente uma tabela com os horários de funcionamento, copiando da tabela abaixo: 
+        Horarios Segunda Terça Quarta Quinta Sexta Sábado Domingos e Feriados Manhã 08:00 12:00 Fechado 08:00 12:00 08:00 12:0008:00 12:00 08:00 12:00 08:00 12:00 Tarde 14:00 18:00 14:00 18:00 14:00 18:00 14:00 18:00 14:00 18:00 
+        Suba para o github.
+    -->
     <link rel="stylesheet" href="./css/desafio2.css">
 </head>
 <body>
@@ -103,6 +109,49 @@
                 <li>Torta de Morango</li>
             </ol>
         </div>
+    </section>
+
+    <section class="horarios">
+        <!-- <img src="" alt=""> -->
+         <!-- cellpadding foi descontinuado no html5 -->
+        <table border="1" cellspacing="0"> 
+            <thead>
+                <tr>
+                    <th>Horários</th>
+                    <th>Segunda</th>
+                    <th>Terça</th>
+                    <th>Quarta</th>
+                    <th>Quinta</th>
+                    <th>Sexta</th>
+                    <th>Sábado</th>
+                    <th>Domingo e Feriados</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <th>Manhã</th>
+                    <td>08:00 <br> 12:00</td>
+                    <td rowspan="2">Fechado</td>
+                    <td>08:00 <br> 12:00</td>
+                    <td>08:00 <br> 12:00</td>
+                    <td>08:00 <br> 12:00</td>
+                    <td>08:00 <br> 12:00</td>
+                    <td rowspan="2">08:00 <br> 12:00</td>
+                </tr>
+
+                <tr>
+                    <th>Tarde</th>
+                    <td>14:00 <br> 18:00</td>
+                    <td>14:00 <br> 18:00</td>
+                    <td>14:00 <br> 18:00</td>
+                    <td>14:00 <br> 18:00</td>
+                    <td>14:00 <br> 18:00</td>
+                </tr>
+
+            </tbody>
+
+        </table>
     </section>
 
 </body>

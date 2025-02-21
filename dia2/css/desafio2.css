@@ -95,3 +95,12 @@ section.doces div ol{
 section.doces div ol li{
     margin-bottom: 3px;
 }
+
+/* Sessao horarios */
+section.horarios{
+    padding: 40px;
+}
+section.horarios table td, section.horarios table th{
+    padding: 5px;
+    text-align: center;
+}
