@@ -99,6 +99,8 @@ section.doces div ol li{
 /* Sessao horarios */
 section.horarios{
     padding: 40px;
+    justify-content: center;
+    flex-direction: column;
 }
 section.horarios table td, section.horarios table th{
     padding: 5px;
