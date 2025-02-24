@@ -101,8 +101,20 @@ section.horarios{
     padding: 40px;
     justify-content: center;
     flex-direction: column;
+    background-color: #D9CCBD;
 }
 section.horarios table td, section.horarios table th{
     padding: 5px;
     text-align: center;
+}
+
+/* Sessao contato */
+section#contato{
+    flex-direction: column;
+    padding: 50px;
+    background-color: #513B23;
+    color: white;
+}
+section#contato h2{
+    margin-bottom: 20px;
 }
