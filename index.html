@@ -3,30 +3,83 @@
 <head>
     <meta name="viewport" content="device-width, initial-scale">
     <meta charset="utf-8">
-    <title>Desafios HTML e CSS - Alpar</title>
-    <link rel='stylesheet' type='text/css' media='screen' href='./assets/css/main.css'>
+    <title>Portfólio</title>
+    <!-- Desafio 1
+        Faça uma página que servirá como o seu portifólio, conte sobre você, e use uma foto sua,
+        use as tags aprendidas.
+        Ao longo do curso, conecte as outras páginas criadas como parte do seu portifólio nessa
+        sua página principal.
+        Não se preocupe com a beleza, trabalharemos isso ao longo do curso. Pense apenas nos
+        dados que serão exibidos, e na estrutura em HTML.
+        Envie para o GitHub, e ative o GitHub Page 
+    -->
+    <link rel="stylesheet" href="./assets/css/portfolio.css">
 </head>
 <body>
-    
-    <main>
-
-        <h1>Mural de Acesso Desafios - Danilo SS</h1>
-        
-        <nav>
-            <h2>HTML:</h2>
+    <nav>
+        <ul>
+            <a href="./cafeteria/index.html">
+                <li>Cafeteria</li>
+            </a>
+            <a href="">
+                <li>HTML feito com Table</li>
+            </a>
+            <a href="">
+                <li>Podcast</li>
+            </a>
+            <a href="">
+                <li>Blog</li>
+            </a>
+        </ul>
+    </nav>
+    <header>
+        <div class="info">
+            <h1>Danilo de Sena Santos - Futuro TC da Alpar</h1>
             
+            <h2>Sobre mim:</h2>
+            <p>
+                Olá, Me chamo Danilo e estou me especializando em ser um programador renomado. Nessa minha jornada viso me tornar <i>Full-Stack</i>, e trabalhar para a Alpar 😘
+            </p>
+            <br>
+            
+        </div>
+        
+        <img src="./assets/img/FotoProfissional.jpeg" alt="Foto do danilo" />
+    </header>
+
+    <section class="habilidades">
+        <img src="./assets/img/coding.jpg" alt="Imagem ilustrativas de um notebook com códigos abertos">
+
+        <div class="linguagens">
+            <h2>Principais linguagens:</h2>
             <ul>
-
-                <li><a href="./dia1/portfolio.html"><button class="btn">Desafio 1</button></a></li>
-                <li><a href="./dia2/coffee.html"><button class="btn">Desafio 2</button></a></li>
-                <li><a href="./dia3/wikipedia.html"><button class="btn">Desafio 3</button></a></li>
-                <li><a href="./dia2/coffee.html#contato"><button class="btn">Desafio 4</button></a></li>
-                <li><a href="loading.html"><button class="btn">Desafio 5</button></a></li>
-
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>PHP</li>
+                <li>SQL</li>
+                <li>Java</li>
+                <li>C#</li>
             </ul>
-        </nav>
+        </div>
+    </section>
 
-    </main>
+    <section class="contatos">
+        <div class="redes-sociais">
+            <p>
+                <strong>Redes Sociais: </strong>
+            </p>
+            <a href="https://www.linkedin.com/in/danilo-s-s/">LinkedIn</a>
+            <a href="https://github.com/SenaNilo">GitHub</a>
+        </div>
+
+        <div class="email">
+            <p><strong>Meu Contato:</strong></p>
+            <ul>
+                <li>danilo.sena005@gmail.com</li>
+            </ul>
+        </div>
+    </section>
 
 </body>
 </html>

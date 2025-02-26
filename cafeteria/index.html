@@ -34,19 +34,16 @@
 
         Depois de criar a página, conecte-a com o seu portfólio e suba para o GitHub
     -->
-    <link rel="stylesheet" href="./css/desafio2.css">
+    <link rel="stylesheet" href="./css/cafeteria.css">
 </head>
 <body>
-    <nav class="voltar"><a href="../index.html">Clique Aqui para Voltar ao Mural</a></nav>
 
     <header class="banner">
         
         <div class="banner-content">
-            <h1>MóBom Coffee</h1>
-            <p>A melhor cafeteria da baixada santista, com os melhores cafés do país</p>
             <img src="./img/mobomBranco.png" alt="Logo da MóBom Coffee Shop">
+            <p>A melhor cafeteria da baixada santista, com os melhores cafés do país!</p>
         </div> 
-
 
     </header>
     
@@ -127,7 +124,7 @@
         <h2>Horários</h2>
         <!-- <img src="" alt=""> -->
          <!-- cellpadding foi descontinuado no html5 -->
-        <table border="1" cellspacing="0" style="width: 100%;"> 
+        <table cellspacing="0">
             <thead>
                 <tr>
                     <th>Horários</th>
@@ -168,7 +165,9 @@
     </section>
 
     <section id="contato">
+
         <h2>Entre em Contato:</h2>
+
         <form action="" method="get">
             <label for="nome"><p>Nome Completo: </p></label>
             <input type="text" name="nome" id="nome" placeholder="Digite seu Nome" required><br>
@@ -179,14 +178,17 @@
             <label for="telefone"><p>Telefone: </p></label>
             <input type="tel" name="telefone" id="telefone" placeholder="(xx) xxxxx-xxxx"><br>
 
-            <label for="assunto">Assunto: </label><br>
-            <input type="text" name="assunto" id="assunto" placeholder="Qual o assunto?" required><br>
+            <label for="assunto"><p>Assunto: </p></label>
+            <input type="text" name="assunto" id="assunto" placeholder="Qual o assunto?" required>
+            <br>
             
-            <label for="msg">Mensagem: </label><br>
-            <textarea name="msg" id="msg" placeholder="Digite sua mensagem" required></textarea><br>
+            <label for="msg"><p>Mensagem: </p></label>
+            <textarea name="msg" id="msg" placeholder="Digite sua mensagem" required></textarea>
+            <br>
 
-            <button type="submit">Enviar</button>
+            <button class="button" type="submit">Enviar</button>
         </form>
+        
     </section>
 
 </body>

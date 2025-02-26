@@ -10,15 +10,6 @@ html{
     font-family: 'Poppins', sans-serif;
 }
 
-nav.voltar{
-    width: 100%;
-    background-color: beige;
-    padding: 5px;
-}
-nav.voltar a{
-    color: black;   
-}
-
 ul li, ol li{
     margin-left: 20px;
 }
@@ -30,7 +21,7 @@ header{
     display: flex;
     align-items: center;
     width: 100%;
-    height: 97vh;
+    height: 100vh;
     padding: 50px;
 }
 header img{
@@ -42,9 +33,11 @@ header img{
 
 header div.info h2{
     margin-bottom: 15px;
+    padding-right: 50px;
 }
 header div.info h1{
     margin-bottom: 40px;
+    font-size: 2.4em;
 }
 
 

@@ -10,21 +10,12 @@ html{
     font-family: 'Poppins', sans-serif;
 }
 
-nav.voltar{
-    width: 100%;
-    background-color: beige;
-    padding: 5px;
-}
-nav.voltar a{
-    color: black;   
-}
-
 /* Banner inicial */
 header.banner{
     background: url("../img/coffeeBanner.jpg");
     background-size: cover;
     width: 100%;
-    height: 98vh;    
+    height: 100vh;    
 }
 
 header.banner div.banner-content{
@@ -33,20 +24,20 @@ header.banner div.banner-content{
     width: 100%;
     height: 100%;
     background-color: #00000091;
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    flex-direction: column;
     color: whitesmoke;
+    margin: 0 auto;
 } 
 
 header.banner div.banner-content p{
     width: 50%;
+    margin-left: 50px;
+    font-size: large;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 header.banner div.banner-content img{
     width: 600px;
-    position: absolute;
-    right: 0;
+    margin-bottom: -200px;
 }
 
 section{
@@ -103,6 +94,26 @@ section.horarios{
     flex-direction: column;
     background-color: #D9CCBD;
 }
+section.horarios table{
+    width: 100%;
+    background-color: #d1b799;
+    border-radius: 10px;
+}
+section.horarios th{
+    background-color: #513B23;
+    color: whitesmoke;
+}
+section.horarios thead th:first-of-type{
+    border-radius: 10px 0 0 0;
+}
+section.horarios thead th:last-of-type{
+    border-radius: 0 10px 0 0;
+}
+
+section.horarios tbody tr:last-of-type th{
+    border-radius: 0 0 0 10px;
+}
+
 section.horarios table td, section.horarios table th{
     padding: 5px;
     text-align: center;
@@ -110,11 +121,62 @@ section.horarios table td, section.horarios table th{
 
 /* Sessao contato */
 section#contato{
-    flex-direction: column;
+    /* flex-direction: row; */
     padding: 50px;
     background-color: #513B23;
     color: white;
 }
+section#contato>*{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
 section#contato h2{
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    width: 50%;
+    font-size: 2.4em;
+}
+section#contato form{
+    width: 50%;
+}
+section#contato form label{
+    margin: 10px 50px;
+}
+section#contato form input{
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid #a1825e;
+    /* width: 100%; */
+    margin: 0 50px;
+}
+section#contato form textarea{
+    font-family: 'Poppins', sans-serif;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid #a1825e;
+    margin: 0 50px;
+}
+section#contato .button {
+    cursor: pointer;
+    font-size: large;
+    font-family: inherit;
+    font-weight: bold;
+    color: #513B23;
+    background-color: #f8f8fd;
+    padding: 0.7em 2.1em;
+    border-radius: 50em;
+    border: 6px solid #a1825e;
+    box-shadow: 0px 8px #D9CCBD;
+    margin: 0 50px;
+}
+
+section#contato .button:hover {
+    background-color: #D9CCBD;
+}
+section#contato .button:active {
+    position: relative;
+    top: 8px;
+    border: 6px solid #d1b799;
+    background-color: #f8f8f8;
+    box-shadow: 0px 0px;
 }
