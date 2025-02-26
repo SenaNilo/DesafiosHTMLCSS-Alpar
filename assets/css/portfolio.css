@@ -10,8 +10,18 @@ html{
     font-family: 'Poppins', sans-serif;
 }
 
-ul li, ol li{
+section ul li, section ol li{
     margin-left: 20px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 2vh 0;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(24,4,61,1) 100%);
 }
 
 header{
@@ -64,3 +74,106 @@ section.contatos{
     display: flex;
     justify-content: space-around;
 }
+
+/* From Uiverse.io by cssbuttons-io */ 
+.btn {
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 2em;
+    display: inline-block;
+    border-radius: 5em;
+    transition: all 0.2s;
+    border: none;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.229);
+}
+  
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+  
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+  
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+}
+  
+.btn::after {
+    background-color: #fff;
+}
+  
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+/* Links e Icones das redes-sociais - Made by https://uiverse.io/profile/Pradeepsaranbishnoi */
+.social-links,.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.social-links a{
+    text-decoration: none;
+    color: #1e1e1e;
+}
+  .social-btn {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    background: white;
+    margin: 5px;
+    transition: 0.3s;
+    justify-content: center;
+  }
+  
+  .social-btn svg {
+    height: 24px;
+    width: 24px;
+  }
+  
+  .social-btn span {
+    width: 0px;
+    overflow: hidden;
+    transition: 0.3s;
+    text-align: center;
+    margin-left: 5px;
+  }
+  
+  .social-btn:hover {
+    width: 150px;
+    border-radius: 5px;
+    background: #e3e3e3;
+  }
+  
+  .social-btn:hover span {
+    padding: 2px;
+    width: 80px;
+  }
+
+  #linkedin svg {
+    fill: #0e76a8;
+  }
+  
+  #github {
+    fill: #333;
+  }
+  

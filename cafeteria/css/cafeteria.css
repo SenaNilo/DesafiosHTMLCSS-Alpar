@@ -89,7 +89,7 @@ section.doces div ol li{
 
 /* Sessao horarios */
 section.horarios{
-    padding: 40px;
+    padding: 50px;
     justify-content: center;
     flex-direction: column;
     background-color: #D9CCBD;
@@ -121,7 +121,6 @@ section.horarios table td, section.horarios table th{
 
 /* Sessao contato */
 section#contato{
-    /* flex-direction: row; */
     padding: 50px;
     background-color: #513B23;
     color: white;
@@ -157,9 +156,7 @@ section#contato form textarea{
     margin: 0 50px;
 }
 section#contato .button {
-    cursor: pointer;
     font-size: large;
-    font-family: inherit;
     font-weight: bold;
     color: #513B23;
     background-color: #f8f8fd;
