@@ -5,7 +5,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>Card - DaniloSS</title>
-    <link rel="stylesheet" href="./assets/card.css">
+    <link rel="stylesheet" href="./assets/css/card.css">
     <!-- Crie uma página HTML com um cartão de perfil básico utilizando apenas HTML e CSS.
     Seu cartão deve conter:
          Uma foto sua com a borda redonda
@@ -15,25 +15,29 @@
          Links da sua preferencia
          Tenha como exemplo o linktree
     Adicione esse desafio em uma nova pasta chamada “card”.
-
      -->
 </head>
 <body>
-    <h1>Card de Apresentação</h1>
+    <main class="card">
 
-    <main>
-        <img src="" alt="Foto do Profissional Danilo">
-        <h2>Danilo de Sena Santos</h2>
-        <p>Sou uma pessoa determinada a alcançar grandes conquistas, movida pela programação e pelo aprendizado contínuo que essa área oferece. Com mais de 2 anos de experiência em HTML, CSS e JavaScript, e mais de 1 ano em PHP, SQL (focado em MySQL), C++ e C#, também possuo conhecimentos em Java, TypeScript e C. Atualmente, estou aprimorando minhas habilidades em React e Firebase, sempre buscando expandir meu conhecimento e agregar valor aos projetos que desenvolvo.</p>
-        <ul>
-            <a href="#">
-                <li>Github</li>
-            </a>
-            <a href="#">
-                <li>Linkedin</li>
-            </a>
-            <a href=""><li>Meu Portfólio</li></a>
-        </ul>
+        <div class="content">
+            <img src="./assets/img/FotoProfissional.jpeg" alt="Foto do Profissional Danilo">
+            <h2>Danilo de Sena Santos</h2>
+            <p>Sou uma pessoa determinada a alcançar grandes conquistas, movida pela programação e pelo aprendizado contínuo que essa área oferece. Com mais de 2 anos de experiência em HTML, CSS e JavaScript, e mais de 1 ano em PHP, SQL (focado em MySQL), C++ e C#, também possuo conhecimentos em Java, TypeScript e C. Atualmente, estou aprimorando minhas habilidades em React e Firebase, sempre buscando expandir meu conhecimento e agregar valor aos projetos que desenvolvo.</p>
+            <ul>
+                <a target="_blank" href="https://github.com/SenaNilo">
+                    <li>    
+                        <img src="./assets/img/github-brands.svg" alt="Ícone do GitHub">
+                    </li>
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/in/danilo-s-s/">
+                    <li><img src="./assets/img/linkedin-brands.svg" alt="Ícone do LinkedIn"></li>
+                </a>
+                <a target="_blank" href="https://senanilo.github.io/MeuPortfolio/">
+                    <li><img src="./assets/img/globe-solid.svg" alt="Ícone de um WebSite, Indicando para meu site portfólio"></li>
+                </a>
+            </ul>
+        </div>
     </main>
 
 </body>
