@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    /* Ele contará os pixels do padding + border + conteudo */
+}
+
+body{
+    font-family: '', Arial, sans-serif;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+ol, ul {
+    padding-left: 30px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    color: #0000ff;
+}
+
+p {
+    text-align: justify;
+    text-indent: 30px;
+    margin-block: 16px;
+}
+
+li { 
+    padding-bottom: 8px;
+}
+
+.badge {
+    display: inline-block;
+    background-color: #bbb;
+    font-size: 12px;
+    padding: 4px;
+    border-radius: 8px;
+}
+
+pre { 
+    display: block;
+    background-color: #bbb;
+    font-size: 12px;
+    padding: 4px;
+    border-radius: 8px;
+    margin: 0 16px 8px;
+}
+
+.posts {
+    width: 90%;
+    margin: 0 auto;
+    background: #ddd;
+    padding: 16px;
+}
