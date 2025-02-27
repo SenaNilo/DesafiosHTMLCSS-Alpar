@@ -148,6 +148,7 @@ section.contatos{
   .social-btn svg {
     height: 24px;
     width: 24px;
+    margin-right: -5px;
   }
   
   .social-btn span {
@@ -164,6 +165,10 @@ section.contatos{
     background: #e3e3e3;
   }
   
+  .social-btn:hover svg{
+    margin-right: 0;
+  }
+
   .social-btn:hover span {
     padding: 2px;
     width: 80px;
