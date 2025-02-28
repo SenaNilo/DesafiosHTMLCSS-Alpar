@@ -46,6 +46,7 @@ aside ul li:hover a {
     scale: 1.1;
 }
 aside ul li a{
+    transition: all 0.5s ease-out;
     color: antiquewhite;
     display: inline-block;
     text-decoration: dashed;
