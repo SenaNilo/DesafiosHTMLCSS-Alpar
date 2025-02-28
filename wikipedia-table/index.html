@@ -15,85 +15,67 @@
         Não aplique o layout em tabelas nos outros sites já feitos, tenha paciência!
         Conecte com o seu portifólio e suba para o github
      -->
-   <style>
-      @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
-      html{
-         font-family: 'Poppins', sans-serif;
-      }
-   </style>
+        <!-- Desafio 3 - CSS
+         Recrie o seu site em tabela, mas agora sem usar tabelas! Não se importe com
+         posicionamentos dos elementos, trabalharemos isso em breve, mas apliquem estilos.
+          O site deve ter um NAVBAR, que deve ficar fixo no topo do site e seguir o scroll.
+          O site deve ter tanto conteúdo (mesmo que lorem ipsum ou gerado por IA), que
+         apareça um scroll
+         -->
+   <link rel="stylesheet" href="./assets/css/no-table.css">
 </head>
 <body>
-    
-   <table border="0" cellspacing="0" style="width: 100%; text-align: center;">
-      <thead>
-         <tr style="background-color: #1a3e70; color: #fff;">
-            <th colspan="3">
-               <h1>Wikipédia</h1>
-            </th>
-         </tr>
-      </thead>
-
-      <tbody>
-         <tr>
-            <td style="text-align: left; background-color: #00a19c; padding-left: 10px; color: white;">
-               <h3>Links:</h3>
-            </td>
-            <td>
-               <h2>Como passar e ser feliz na Alpar?</h2>
-            </td>
-
-            <td rowspan="2">
-               <img src="./assets/img/alparlogo.jfif" alt="Logo da empresa Alpar">
-            </td>
-         </tr>
-
-         <tr>
-            <td style="text-align: left; background-color: #00a19c; padding-left: 10px;">
+   <header>
+      <h1>Wikipédia</h1>
+   </header>
+   
+   <aside>
+      <nav>
+         <h3>Links:</h3>
+      
+         <ul>
+            <li>
                <a style="color: whitesmoke;" href="../index.html">Voltar para Mural</a>
-               
-            </td>
-            <td style="text-align: left; padding: 10px;">
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ducimus explicabo aut modi et aliquid dignissimos possimus corrupti? Asperiores corporis a eligendi facilis maiores veritatis quis molestiae sed, officia nobis.</p>
-               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A voluptatibus, possimus facilis porro, reprehenderit voluptate esse odio nobis, mollitia nesciunt recusandae. Unde porro placeat doloribus aspernatur laborum a expedita omnis.</p>
-            </td>
-         </tr>
-
-         <tr>
-            <td style="text-align: left; background-color: #00a19c; padding-left: 10px;">
+            </li>
+            <li>
                <a style="color: whitesmoke;" href="../dia2/coffee.html">Cafeteria</a>
-            </td>
-            <td>
-               <h2>Nunca Desista!</h2>
-            </td>
-            <td rowspan="4">
-               <!-- Designed by Freepik -->
-               
-               <img src="./assets/img/pessoasfelizes.jpg" alt="Foto de pessoas felizes comemorando e tendo muita fé" width="300px">
-            </td>
-         </tr>
-
-         <tr>
-            <td style="text-align: left; background-color: #00a19c; padding-left: 10px;">
+            </li>
+            <li>
                <a style="color: whitesmoke;" href="../dia1/portfolio.html">Desenvolvedor do Site</a>
-            </td>
-            <td style="text-align: left; padding: 10px;">
-               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae unde nihil natus, veniam deleniti earum culpa voluptatum blanditiis labore dignissimos, nulla incidunt autem qui quia amet illum? Voluptate, necessitatibus accusamus?</p>
-            </td>
-         </tr>
-         <tr>
-            <td style="background-color: #00a19c;" rowspan="2"></td>
-            <td>
-               <h2>Dê o seu melhor e tenha fé!</h2>
-            </td>
-         </tr>
-         <tr>
-            <td style="text-align: left; padding: 10px;">
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt quae voluptate, quod asperiores suscipit ullam nostrum! Labore veritatis exercitationem iusto atque inventore distinctio repudiandae numquam, illum rem magnam doloribus ab.</p>
-            </td>
-         </tr>
+            </li>
+         </ul>
+      </nav>
+   </aside>
+   
+   <main>
 
-      </tbody>
-   </table>
+      <article>
+         <h2>Como passar e ser feliz na Alpar?</h2>
+         
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ducimus explicabo aut modi et aliquid dignissimos possimus corrupti? Asperiores corporis a eligendi facilis maiores veritatis quis molestiae sed, officia nobis.</p>
+         <br>
+         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A voluptatibus, possimus facilis porro, reprehenderit voluptate esse odio nobis, mollitia nesciunt recusandae. Unde porro placeat doloribus aspernatur laborum a expedita omnis.</p>
+      </article>
 
+      
+      <article>
+         <h2>Nunca Desista!</h2>
+         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae unde nihil natus, veniam deleniti earum culpa voluptatum blanditiis labore dignissimos, nulla incidunt autem qui quia amet illum? Voluptate, necessitatibus accusamus?</p>
+         <br>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae velit, porro repellat asperiores voluptate necessitatibus perspiciatis nulla quos quod, itaque labore impedit, recusandae excepturi quaerat quidem laborum officia veniam odio.</p>
+      </article>
+      
+      <article>
+         <h2>Dê o seu melhor e tenha fé!</h2>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt quae voluptate, quod asperiores suscipit ullam nostrum! Labore veritatis exercitationem iusto atque inventore distinctio repudiandae numquam, illum rem magnam doloribus ab.</p><br>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam corporis nobis iure sequi? Quisquam rem assumenda voluptas quidem expedita molestias? Eius, repellendus debitis? Perferendis nostrum nisi eaque maiores vero possimus.</p>
+      </article>
+      <aside class="imgs">
+         <img src="./assets/img/alparlogo.jfif" alt="Logo da empresa Alpar">
+         <!-- Designed by Freepik -->
+         <img src="./assets/img/pessoasfelizes.jpg" alt="Foto de pessoas felizes comemorando e tendo muita fé" width="300px">
+      </aside>
+   </main>
+   
 </body>
 </html>
