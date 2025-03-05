@@ -35,8 +35,17 @@ aside{
     top: 120px;
     position: fixed;
 }
+aside nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
 aside ul{
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
 }
 aside ul li {
     margin: 10px 0;
@@ -62,6 +71,9 @@ main {
     right: 300px;
     position: absolute;
     padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 main h2{
     text-align: center;
@@ -75,14 +87,18 @@ main article{
     border-radius: 10px;
     box-shadow: 20px 20px 45px 0px rgba(0,0,0,0.45);
 }
+article p {
+    text-indent: 15px;
+}
 aside.imgs{
     background-color: unset;
     position: fixed;
     right: 0;
     padding: 20px;
     width: 300px;
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 aside.imgs img{
     width: 100%;
@@ -92,6 +108,6 @@ aside.imgs img{
     border: 5px dashed #1a3e70;
     border-radius: 50%;
 }
-aside.imgs img~img{
+aside.imgs img~img{ /* Seletor de irmão adjacentes */
     border-radius: 10px;
 }
