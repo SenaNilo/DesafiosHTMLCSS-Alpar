@@ -15,25 +15,27 @@ html{
     font-size: 1rem;
 }
 
+body{
+    display: grid;
+    grid-template-areas: 'header header' 'aside main' 'footer footer';
+    grid-template-rows: 120px 1fr 100px;
+    grid-template-columns: 200px 1fr;
+}
+
 header{
-    width: 100%;
+    grid-area: header;
     background-color: #1a3e70;
     color: whitesmoke;
-    padding: 40px;
-    text-align: center;
-    height: 120px;
-    position: fixed;
-    z-index: 1;
+    /* padding: 40px; */
+    place-items: center;
+    place-content: center;
 }
 
 aside{
-    background-color: #00a19c;
+    grid-area: aside;
     color: whitesmoke;
-    padding: 20px 20px;
-    width: 200px;
-    bottom: 0;
-    top: 120px;
-    position: fixed;
+    padding: 20px;
+    background-color: #00a19c;
 }
 aside nav {
     height: 100%;
@@ -65,18 +67,13 @@ aside ul li a{
     border-radius: 10px;
 }
 
-main {
-    top: 120px;
-    left: 200px;
-    right: 300px;
-    position: absolute;
-    padding: 40px 50px;
+main{
+    grid-area: main;
+    padding: 40px 0 40px 50px;
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
 }
 main h2{
-    text-align: center;
     margin-bottom: 40px;
 }
 main article{
@@ -90,15 +87,14 @@ main article{
 article p {
     text-indent: 15px;
 }
+
 aside.imgs{
     background-color: unset;
-    position: fixed;
-    right: 0;
-    padding: 20px;
-    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding: 30px;
+    margin-left: 40px;
 }
 aside.imgs img{
     width: 100%;
@@ -109,3 +105,12 @@ aside.imgs img{
 aside.imgs img~img{ /* Seletor de irmão adjacentes */
     border-radius: 10px;
 }
+
+footer{
+    grid-area: footer;
+    color: whitesmoke;
+    background-color: #0b1b31;
+    place-content: center;
+    place-items: center;
+}
+
