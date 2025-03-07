@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: bisque;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.back{
+    background: url(../img/verso.png) no-repeat;
+    background-size: 98%;
+    background-position: center;
+    width: 400px;
+    height: 600px;
+    border-radius: 20px;
+    transition: all 1s;
+    position: absolute;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.front{
+    background-color: whitesmoke;
+    width: 400px;
+    height: 600px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-areas: 'up' 'img' 'down';
+    font-size: 40px;
+    transition: all 1s;
+    backface-visibility: hidden;
+}
+
+.carta:hover .back{
+    transform: rotateY(0deg);
+}
+.carta:hover .front{
+    transform: rotateY(180deg);
+}
+/* .back:hover{
+    transform: rotateY(180deg);
+    z-index: 1;
+}
+.carta:hover .back:hover{
+    transform: rotateY(180deg);
+    z-index: 1;
+} */
+
+.carta img.center{
+    grid-area: img;
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.carta img{
+    width: 50px;
+}
+
+.carta .front>div{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carta .nome-carta-up{
+    transform: translateX(-40%);
+    grid-area: up;
+}
+.carta .nome-carta-down{
+    transform: rotate(180deg) translateX(-40%);
+    grid-area: down;
+}
