@@ -60,7 +60,8 @@ aside ul li a{
     display: inline-block;
     text-decoration: dashed;
     padding: 10px;
-    background-color: #1a3e70;
+    /* background-color: #1a3e70; */
+    background-color: rgba(26, 62, 112, 0.65);
     width: 100%;
     border-radius: 10px;
 }

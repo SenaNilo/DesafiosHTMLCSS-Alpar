@@ -119,6 +119,12 @@ section.horarios table td, section.horarios table th{
     text-align: center;
 }
 
+section.horarios table tr:first-child td:nth-child(odd),
+section.horarios table tr:last-of-type td~td:nth-child(even){ /* ~ -> seletor de irmãos adjacentes */
+    background-color: #a1825e;
+    color: whitesmoke;
+}
+
 /* Sessao contato */
 section#contato{
     padding: 50px;
