@@ -6,8 +6,21 @@
     box-sizing: border-box;
 }
 
+:root{
+    font-size: 62.5%;
+}
+
 html{
     font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+p{
+    font-size: 1.6rem;
+}
+
+h2{
+    font-size: 2rem;
 }
 
 /* Banner inicial */
@@ -19,7 +32,7 @@ header.banner{
 }
 
 header.banner div.banner-content{
-    padding: 50px;
+    padding: 5rem;
     font-size: large;
     width: 100%;
     height: 100%;
@@ -30,14 +43,14 @@ header.banner div.banner-content{
 
 header.banner div.banner-content p{
     width: 50%;
-    margin-left: 50px;
+    margin-left: 5rem;
     font-size: large;
     font-weight: 600;
-    letter-spacing: 1px;
+    letter-spacing: .1rem;
 }
 header.banner div.banner-content img{
-    width: 600px;
-    margin-bottom: -200px;
+    width: 60rem;
+    margin-bottom: -20rem;
 }
 
 section{
@@ -52,16 +65,16 @@ section img{
 section div{
     font-size: large;
     width: 50%;
-    padding: 50px;
+    padding: 5rem;
 }
 section div h2{
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 section div ul{
-    margin-left: 30px;
+    margin-left: 3rem;
 }
 section div ul li{
-    margin-bottom: 3px;
+    margin-bottom: .3rem;
 }
 /* Sessão bebidas */
 section.bebidas{
@@ -81,42 +94,47 @@ section.doces{
     color: whitesmoke;
 }
 section.doces div ol{
-    margin-left: 30px;
+    margin-left: 3rem;
 }
 section.doces div ol li{
-    margin-bottom: 3px;
+    margin-bottom: .3rem;
 }
 
 /* Sessao horarios */
 section.horarios{
-    padding: 50px;
+    padding: 5rem;
     justify-content: center;
     flex-direction: column;
     background-color: #D9CCBD;
 }
+section.horarios h2{
+    font-size: 2rem;
+    margin-bottom: 4rem;
+}
 section.horarios table{
     width: 100%;
     background-color: #d1b799;
-    border-radius: 10px;
+    border-radius: 1rem;
+    font-size: 1.4rem;
 }
 section.horarios th{
     background-color: #513B23;
     color: whitesmoke;
 }
 section.horarios thead th:first-of-type{
-    border-radius: 10px 0 0 0;
+    border-radius: 1rem 0 0 0;
 }
 section.horarios thead th:last-of-type{
-    border-radius: 0 10px 0 0;
+    border-radius: 0 1rem 0 0;
 }
 
 section.horarios tbody tr:last-of-type th{
-    border-radius: 0 0 0 10px;
+    border-radius: 0 0 0 1rem;
 }
 
 section.horarios table td, section.horarios table th{
     transition: 0.4s;
-    padding: 5px;
+    padding: 0.5rem;
     text-align: center;
 }
 
@@ -135,7 +153,7 @@ section.horarios table tr:first-child td:nth-child(odd):hover, section.horarios 
 
 /* Sessao contato */
 section#contato{
-    padding: 50px;
+    padding: 5rem;
     background-color: #513B23;
     color: white;
 }
@@ -145,7 +163,7 @@ section#contato>*{
     align-items: stretch;
 }
 section#contato h2{
-    /* margin-bottom: 20px; */
+    /* margin-bottom: 2rem; */
     width: 50%;
     font-size: 2.4em;
 }
@@ -153,32 +171,32 @@ section#contato form{
     width: 50%;
 }
 section#contato form label{
-    margin: 10px 50px;
+    margin: 1rem 5rem;
 }
 section#contato form input{
-    padding: 10px;
-    border-radius: 10px;
-    border: 3px solid #a1825e;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 0.3rem solid #a1825e;
     /* width: 100%; */
-    margin: 0 50px;
+    margin: 0 5rem;
 }
 section#contato form textarea{
     font-family: 'Poppins', sans-serif;
-    padding: 10px;
-    border-radius: 10px;
-    border: 3px solid #a1825e;
-    margin: 0 50px;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 0.3rem solid #a1825e;
+    margin: 0 5rem;
 }
 section#contato .button {
     font-size: large;
     font-weight: bold;
     color: #513B23;
     background-color: #f8f8fd;
-    padding: 0.7em 2.1em;
+    padding: 0.5em 2.1em;
     border-radius: 50em;
-    border: 6px solid #a1825e;
-    box-shadow: 0px 8px #D9CCBD;
-    margin: 0 50px;
+    border: 0.6rem solid #a1825e;
+    box-shadow: 0 0.8rem #D9CCBD;
+    margin: 0 5rem;
     transition: 0.3s;
 }
 
@@ -187,8 +205,19 @@ section#contato .button:hover {
 }
 section#contato .button:active {
     position: relative;
-    top: 8px;
-    border: 6px solid #d1b799;
+    top: 0.8rem;
+    border: 0.6rem solid #d1b799;
     background-color: #f8f8f8;
-    box-shadow: 0px 0px;
+    box-shadow: 0 0;
+}
+/* Font- size padrao table - 1.4rem */
+@media (max-width: 768px){
+    :root{
+        font-size: 8px;
+    }
+
+    section div ul, section div ol{
+        font-size: 1.6rem;
+    }
+
 }
