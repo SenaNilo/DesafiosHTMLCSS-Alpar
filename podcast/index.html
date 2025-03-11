@@ -1,82 +1,117 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DeNilo - Podcast</title>
-    <!-- Devs:
-        Danilo de Sena Santos e Nicollas Richard Deluca Maia
-     -->
-    <link rel="stylesheet" href="./assets/css/podcast.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=slideshow" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
-  <body
-    style="background-color: #505050; color: whitesmoke; font-family: 'Ravie'"
-  >
-    <table border="0" cellspacing="0" width="100%">
-      <tr style="background-color: #070c31">
-        <!-- <td style="width: 150px">
-          <img src="./assets/img/logoDeniloPodcast.jpg" height="150px" width="150px" />
-        </td> -->
-        <td align="center">
-          <h1><img style="width: 500px; margin: -170px 0;" src="./assets/img/logoDeniloPodcastSemFundo.png" alt="Logo DeNilo Poscast"></h1>
-          <p>Bem-vindo ao DeNilo, seu podcast sobre tecnologia!</p>
-        </td>
-      </tr>
+  <body>
+    <nav>
+      <ul>
+        <a href="../"><li>Portfólio</li></a>
+        <a href="./episodios.html"><li>Episódios</li></a>
+      </ul>
+    </nav>
 
-      <tr>
-        <!-- <td rowspan="0" style="background-color: rgb(21, 21, 21)"></td> -->
-        <td align="center" style="background: rgb(80,80,80); background: linear-gradient(0deg, rgba(80,80,80,1) 80%, rgba(7,12,49,1) 100%);">
-          <h2>
-            Confira nosso episódio:<br />
-            #001 - Treinamento de IA: LLM
-          </h2>
-          <p>Vídeo de resumo sobre a LLM:</p>
-          <iframe
-            width="100%"
-            height="800px"
-            src="https://www.youtube.com/embed/LPZh9BOjkQs"
-            title="Large Language Models explained briefly"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          >
-          </iframe>
-        </td>
-      </tr>
+    <!--           =================================
+    ============ CABECALHO - LOGO - TÍTULO  ===================
+            ================================== -->
+    <header>
+      <img src="assets/img/DeNilo editada.jpg" alt="Logo DeNilo" />
+      <div class="title">
+        <span>Podcast</span>
+        <h1>DeNilo</h1>
+        <p>Bem Vindo ao DeNilo, Seu podcast de tecnologia</p>
+      </div>
+    </header>
 
-      <tr>
-        <td align="center" style="background: rgb(21,21,21);">
-          <h2>🎧 Ouça o Podcast</h2>
-          <p>Acompanhe o episódio completo em áudio:</p>
-        </td>
-      </tr>
+    <!--         =================================
+    ============ EPS - LISTAS - DESCRIÇÕES  ===================
+            ================================== -->
 
-      <tr>
-        <!-- <td align="center"></td> -->
-        <td style="background: rgb(7,12,49); background: linear-gradient(0deg, rgba(7,12,49,1) 0%, rgba(21,21,21,1) 100%);" align="center">
-          <h3>🔊 Parte 1</h3>
-          <audio controls>
-            <source src="./assets/audio/part1.mp3" type="audio/mpeg" />
-            Verfique se o navegador suporta audio.
-          </audio>
-          <h3>🔊 Parte 2</h3>
-          <audio controls>
-            <source src="./assets/audio/part2.mp3" type="audio/mpeg" />
-            Verfique se o navegador suporta audio.
-          </audio>
-        </td>
-      </tr>
-
-      <tr>
-        <td
-          style="background-color: #070c31"
-          align="center"
+    <main>
+      <div class="nav-eps">
+        <div class="join-mais">
+          <button>Inscrever-se</button>
+          <img
+            src="assets/img/more_horiz_24dp_EFEFEF_FILL0_wght400_GRAD0_opsz24.svg"
+          />
+        </div>
+        <h3>Sobre</h3>
+        <span
+          >Descubra novos prazeres, conversamos sobre Ciencia e Tecnologia</span
         >
-          <p>© 2025 DeNilo Podcast - thanks for watching</p>
-          <p>Desenvolvedores - Danilo de Sena Santos e Nicollas Richard Deluca Maia</p>
-        </td>
-      </tr>
-    </table>
+        <div class="botoes-tag">
+          <button>4,9 * (15,6mil)</button> •
+          <button>Tecnologia</button>
+          <button>Cultura</button>
+        </div>
+      </div>
+
+      <section class="episodios">
+        <a class="ep" href="./episodios.html" style="text-decoration: none;">
+          <div class="ep">
+            <img src="assets/img/LLM.jpg" alt="Imagem ep1" />
+            <div class="descricoes">
+              <h3>#001 - TREINAMENTO DE IA: LLM</h3>
+              <div class="icon-text">
+                <span class="material-symbols-outlined">Smart_Display</span>
+                <b><p>Vídeo, áudio • DeNilo Podcast</p></b>
+              </div>
+              <b
+                ><span class="resumo"
+                  >Neste episódio abordaremos situações práticas muito rentáveis
+                  no uso de IAs e como isso afeta nossos empregos.</span
+                >
+                <span class="data">Hoje • 0h17m</span></b
+              >
+            </div>
+          </div>
+        </a>
+
+        <div class="ep">
+          <img src="assets/img/LLM.jpg" alt="Imagem ep1" />
+          <div class="descricoes">
+            <h3>#002 - PROGRAMA ALPAR ROCKET</h3>
+            <div class="icon-text">
+              <span class="material-symbols-outlined"> smart_display </span>
+              <b><p>Vídeo, áudio • DeNilo Podcast</p></b>
+            </div>
+            <b
+              ><span class="resumo"
+                >Muita aventura e desfaios com os novos participantes do alpar
+                rocket program.</span
+              >
+              <span class="data">Em breve • 1h15m</span></b
+            >
+          </div>
+        </div>
+
+        <div class="ep">
+          <img src="assets/img/LLM.jpg" alt="Imagem ep1" />
+          <div class="descricoes">
+            <h3>#003 - ACADÊMIA DE LÍDERES</h3>
+            <div class="icon-text">
+              <span class="material-symbols-outlined"> smart_display </span>
+              <b><p>Vídeo, áudio • DeNilo Podcast</p></b>
+            </div>
+            <b
+              ><span class="resumo"
+                >Ensinamentos sobre formação e gestão de profissionais.</span
+              >
+              <span class="data">Em breve • 1h15m</span></b
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <footer>
+      <p>© 2025 DeNilo Podcast - thanks for watching</p>
+
+      <p>Desenvolvedores - Danilo de Sena Santos e Nicollas Richard Deluca Maia</p>
+    </footer>
   </body>
 </html>

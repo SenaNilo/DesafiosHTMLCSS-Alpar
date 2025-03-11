@@ -7,33 +7,38 @@
     /* Ele contará os pixels do padding + border + conteudo */
 }
 
+:root{
+    font-size: 62.5%;
+}
+
 body{
     font-family: 'Poppins', Arial, sans-serif;
+    font-size: 1.6rem;
 }
 
 main{
-    padding: 132px 0 32px 200px;
+    padding: 13.2rem 0 2.2rem;
 }
 
 
 h1 {
-    font-size: 32px;
+    font-size: 3.2rem;
     font-weight: 900;
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
 }
 
 h3 {
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 700;
-    margin-bottom: 16px;
+    margin-bottom: 1.6rem;
 }
 
 ol, ul {
-    padding-left: 30px;
+    padding-left: 3rem;
 }
 
 img {
@@ -48,49 +53,49 @@ a {
 
 p {
     text-align: justify;
-    text-indent: 30px;
-    margin-block: 16px;
+    text-indent: 3rem;
+    margin-block: 1.6rem;
 }
 
 li { 
-    padding-bottom: 8px;
+    padding-bottom: 0.8rem;
 }
 
 .badge {
     display: inline-block;
     background-color: #bbb;
-    font-size: 12px;
-    padding: 4px;
-    border-radius: 8px;
+    font-size: 1.2rem;
+    padding: 0.4rem;
+    border-radius: 0.8rem;
 }
 
 pre { 
     display: block;
     background-color: #bbb;
-    font-size: 12px;
-    padding: 4px;
-    border-radius: 8px;
-    margin: 0 16px 8px;
+    font-size: 1.2rem;
+    padding: 0.4rem;
+    border-radius: 0.8rem;
+    margin: 0 1.6rem 0.8rem;
 }
 
 .post {
     width: 90%;
     margin: 0 auto;
     background: #ddd;
-    padding: 16px;
-    margin-bottom: 32px;
-    border: 2px solid black;
+    padding: 1.6rem;
+    margin-bottom: 3.2rem;
+    border: 0.2rem solid black;
 }
 
 header#header {
     background-color: #1865ff;
     color: #fff;
-    padding: 16px 32px;
+    padding: 1.6rem 3.2rem;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    height: 100px;
+    height: 10rem;
 }
 
 header p {
@@ -101,10 +106,11 @@ header p {
 aside { 
     background-color: #4684ff;
     color: #fff;
-    padding: 16px 16px 8px;
-    width: 200px;
+    padding: 1.6rem 1.6rem 0.8rem;
+    width: 20rem;
     position: fixed;
-    top: 100px;
+    top: 10rem;
+    display: none;
     bottom: 0;
 }
 
@@ -117,12 +123,116 @@ nav{
 }
 
 nav ul{
-    height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    list-style: none;
+    padding: 0;
 }
-nav ul li{
-    background-color: #000;
-    flex: 1;
+nav ul a{
+    display: block;
+    opacity: 0.7;
+    transition: 0.3s; /* Assim a propriedade dele será all quando nao especificada!!!! */
+    position: relative;
+    overflow: hidden;
+}
+
+nav ul a::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 0.4rem;
+    background: #fff;
+    transition: 0.3s;
+    border-radius: 1rem;
+}
+nav ul a.active,
+nav ul a:hover{
+    opacity: 1;
+}
+nav ul a.active::before,
+nav ul a:hover::before{
+    left: 0%;
+}
+
+.menu-button {
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    top: 50%;
+    right: 3.2rem;
+    transform: translateY(-50%);
+    border: 0;
+    background: none;
+    display: block;
+    cursor: pointer;
+}
+
+.menu-button div{
+    opacity: 0.7;
+    height: 0.5rem;
+    width: 3.2rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    position: relative;
+    transition: 0.3s;
+}
+
+.menu-button div::before{
+    content: '';
+    height: 0.5rem;
+    width: 3.2rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    position: absolute;
+    left: 0;
+    transition: 0.3s;
+    top: -1rem;
+    opacity: 1;
+}
+.menu-button div::after{
+    content: '';
+    height: 0.5rem;
+    width: 3.2rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    position: absolute;
+    transition: 0.3s;
+    left: 0;
+    bottom: -1rem;
+}
+
+.menu-button:hover div{
+    opacity: 1;
+}
+
+.menu-button:active div{
+    transform: rotate(-45deg);
+    /* opacity: 1; */
+}
+.menu-button:active div::after{
+    transform: rotate(-90deg);
+    left: 0;
+    bottom: 0;
+    opacity: 1;
+}
+.menu-button:active div::before{
+    opacity: 0;
+}
+
+@media (min-width: 750px){
+
+    aside{
+        display: block;
+    }
+
+    main{
+        padding: 13.2rem 0 3.2rem 20rem;
+    }
+    
+    .menu-button{
+        display: none;
+    }
+
 }

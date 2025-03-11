@@ -104,7 +104,7 @@ body{
     height: 100%;
     background: linear-gradient(#7900ca, #387ef0);
     transition: opacity 300ms;
-    animation: rotation_9018 8000ms infinite linear;
+    animation: rotation 8000ms infinite linear;
     animation-play-state: paused;
 }
 
@@ -123,7 +123,8 @@ body{
     backdrop-filter: blur(50px);
 }
 
-@keyframes rotation_9018 {
+/* Animaçoes */
+@keyframes rotation {
     0% {
         transform: rotate(0deg);
     }
