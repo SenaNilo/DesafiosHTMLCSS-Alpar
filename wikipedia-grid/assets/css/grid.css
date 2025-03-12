@@ -20,6 +20,7 @@ body{
     grid-template-areas: 'header header' 'aside main' 'footer footer';
     grid-template-rows: 120px 1fr 100px;
     grid-template-columns: 200px 1fr;
+    background-color: whitesmoke;
 }
 
 header{
