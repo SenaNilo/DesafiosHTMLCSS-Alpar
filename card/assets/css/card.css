@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+:root{
+    font-size: 6.25%;
+}
+
 html{
     font-family: 'Poppins', sans-serif;
 }
@@ -15,27 +19,28 @@ body{
     display: grid;
     place-items: center;
     height: 100vh;
+    font-size: 16rem;
 }
 
 /* Idea by github/ElSombrero2 from uiverse.io */
 .card {
-    width: 390px;
-    padding: 10px;
+    width: 390rem;
+    padding: 10rem;
     background: #171717;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     position: relative;
-    box-shadow: 0px 0px 3px 1px #00000088;
-    border-radius: 10px;
+    box-shadow: 0rem 0rem 3rem 1rem #00000088;
+    border-radius: 10rem;
 }
 
 .card .content {
-    border-radius: 5px;
+    border-radius: 5rem;
     background: #0e0e0e;
     z-index: 1;
-    padding: 20px;
+    padding: 20rem;
     color: white;
     display: flex;
     flex-direction: column;
@@ -43,16 +48,16 @@ body{
     align-items: center;
 }
 .card .content>img{
-    width: 250px;
+    width: 250rem;
     border-radius: 50%;
-    border: 2px solid whitesmoke;
+    border: 2rem solid whitesmoke;
 }
 .card .content p{
-    text-indent: 30px;
+    text-indent: 30rem;
     text-align: justify;
 }
 .card .content h2{
-    margin: 10px 0;
+    margin: 10rem 0;
 }
 
 
@@ -62,13 +67,13 @@ body{
     justify-content: space-around;
     width: 100%;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 20rem;
 }
 .card .content ul img{
-    width: 45px;
+    width: 45rem;
     background: #fff;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 10rem;
+    border-radius: 10rem;
 }
 
 .card .content ul img:hover{
@@ -84,10 +89,10 @@ body{
     content: " ";
     display: block;
     background: white;
-    width: 15px;
-    height: 50px;
+    width: 15rem;
+    height: 50rem;
     position: absolute;
-    filter: blur(50px);
+    filter: blur(50rem);
     overflow: hidden;
 }
 
@@ -100,7 +105,7 @@ body{
     content: " ";
     position: absolute;
     display: block;
-    width: 200px;
+    width: 200rem;
     height: 100%;
     background: linear-gradient(#7900ca, #387ef0);
     transition: opacity 300ms;
@@ -117,10 +122,10 @@ body{
     position: absolute;
     content: " ";
     display: block;
-    width: 430px;
+    width: 430rem;
     height: 100%;
     background: #17171733;
-    backdrop-filter: blur(50px);
+    backdrop-filter: blur(50rem);
 }
 
 /* Animaçoes */
@@ -142,5 +147,34 @@ body{
     }
     100%{
         background-position: 0% 50%;
+    }
+}
+
+/* Media Query */
+@media (max-height: 851px){
+    :root{
+        font-size: 4.5%;
+    }
+
+    body{
+        font-size: 17rem;
+    }
+}
+@media (min-height: 1000px){
+    :root{
+        font-size: 7.75%;
+    }
+
+    body{
+        font-size: 19rem;
+    }
+}
+@media (min-height: 2000px){
+    :root{
+        font-size: 12.75%;
+    }
+
+    body{
+        font-size: 19rem;
     }
 }
