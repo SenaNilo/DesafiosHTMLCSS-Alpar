@@ -231,7 +231,6 @@ nav ul a:hover::before{
 
 .menu-button.active div{
     transform: rotate(-45deg);
-    /* opacity: 1; */
 }
 .menu-button.active div::after{
     transform: rotate(-90deg);
