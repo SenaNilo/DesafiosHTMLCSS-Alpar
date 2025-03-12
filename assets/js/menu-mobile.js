@@ -1,5 +1,5 @@
-const menuEl = document.querySelector(".menu-mobile")
-const menuButtonEl = document.querySelector(".menu-mobile .menu-button")
+const menuEl = document.querySelector("ul.menu-links")
+const menuButtonEl = document.querySelector(".mobile-menu .menu-button")
 menuButtonEl.onclick = () => {
     const active = menuEl.classList.toggle("active")
     if(active)

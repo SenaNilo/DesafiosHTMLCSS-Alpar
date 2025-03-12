@@ -32,6 +32,9 @@ nav ul {
   padding: 3vh 0;
   transition: 0.3s;
 }
+nav .mobile-menu {
+  display: none;
+}
 
 .btn.dropdown:hover{
   border-radius: 10rem;
@@ -289,6 +292,7 @@ section.contatos>div p{
   }
   /* Padding 25rem de grade para o site  */
 
+  /* Nav - Menu */
   nav .mobile-menu{
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(24, 4, 61, 1) 100%);
     color: whitesmoke;
@@ -301,6 +305,7 @@ section.contatos>div p{
     padding: 25rem;
     position: fixed;
     width: 100vw;
+    height: 9vh;
   }
 
   .menu-button {
@@ -373,11 +378,53 @@ section.contatos>div p{
     padding: 25rem;
     justify-content: space-around;
     text-align: center;
-    height: 70%;
+    height: 95vh;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(24, 4, 61, 1) 100%);
+  }
+  nav ul.menu-links div{
+    width: 100%;
   }
   nav ul.menu-links.active{
     top: 8%;
   }
 
+  nav .dropdown .dropdown-content{
+    transform: translateY(15rem);
+    left: 0;
+  }
 
+  .dropdown:active .dropdown-content {
+    display: block;
+  }
+
+  .btn{
+    position: static;
+  }
+  .btn::after{
+    content: unset;
+  }
+
+  header{
+    flex-direction: column;
+    padding: calc(9vh + 30rem) 30rem 30rem;
+    height: 100vh;
+  }
+
+  header img{
+    width: 350rem;
+    height: 350rem;
+  }
+
+  section.habilidades img{
+    width: 400rem;
+    height: 400rem;
+  }
+  section.habilidades{
+    flex-direction: column;
+    padding: 50rem;
+  }
+
+  section.habilidades div.linguagens{
+    margin: 60rem 0 0;
+  }
 }
