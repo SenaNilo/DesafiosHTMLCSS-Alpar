@@ -111,6 +111,10 @@ section.horarios h2{
     font-size: 2rem;
     margin-bottom: 4rem;
 }
+section.horarios .table{
+    width: 100%;
+    padding: 1rem 2rem;
+}
 section.horarios table{
     width: 100%;
     background-color: #d1b799;
@@ -210,7 +214,9 @@ section#contato .button:active {
     background-color: #f8f8f8;
     box-shadow: 0 0;
 }
+
 /* Font- size padrao table - 1.4rem */
+/* Tablet */
 @media (max-width: 768px){
     :root{
         font-size: 8px;
@@ -220,4 +226,65 @@ section#contato .button:active {
         font-size: 1.6rem;
     }
 
+}
+/* Moble L */
+@media (max-width: 426px){
+    :root{
+        font-size: 72.5%;
+    }
+
+    header.banner div.banner-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    header.banner div.banner-content img{
+        width: 90%;
+        margin-bottom: -19rem;
+    }
+
+    header.banner div.banner-content{
+        align-items: center;
+        padding: 10rem 2rem;
+    }
+
+    header.banner div.banner-content p{
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+
+    section{
+        flex-direction: column !important;
+        padding: 3rem !important;
+    }
+
+    section img{
+        width: 100%;
+        /* margin: 3rem; */
+        border-radius: 10px;
+    }
+    section div{
+        width: 100%;
+        padding: 3rem 1rem 1rem;
+    }
+
+    section.horarios{
+        padding: 3rem;
+    }
+    section.horarios .table{
+        border-radius: 1rem;
+        overflow-x: auto;
+        padding: 0;
+    }
+
+    section#contato h2{
+        margin-bottom: 3rem;
+    }
+    section#contato h2,
+    section#contato form{
+        text-align: center;
+        width: 100%;
+    }
 }
