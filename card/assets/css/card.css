@@ -7,7 +7,7 @@
 }
 
 :root{
-    font-size: 6.25%;
+    font-size: 5.65%;
 }
 
 html{
@@ -19,12 +19,12 @@ body{
     display: grid;
     place-items: center;
     height: 100vh;
-    font-size: 16rem;
+    font-size: 19rem;
 }
 
 /* Idea by github/ElSombrero2 from uiverse.io */
 .card {
-    width: 390rem;
+    width: 460rem;
     padding: 10rem;
     background: #171717;
     display: flex;
@@ -151,22 +151,19 @@ body{
 }
 
 /* Media Query */
-@media (max-height: 851px){
-    :root{
-        font-size: 4.5%;
+@media (max-width: 431px){
+    .card{
+        width: 350rem;
     }
-
-    body{
-        font-size: 17rem;
+}
+@media (max-height: 750px){
+    :root{
+        font-size: 4.75%;
     }
 }
 @media (min-height: 1000px){
     :root{
         font-size: 7.75%;
-    }
-
-    body{
-        font-size: 19rem;
     }
 }
 @media (min-height: 2000px){

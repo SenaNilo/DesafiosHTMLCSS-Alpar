@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+:root{
+    font-size: 6.25%;
+}
+
 html{
     font-family: 'Poppins', sans-serif;
 }
@@ -20,9 +24,9 @@ body{
     background: url(../img/verso.png) no-repeat;
     background-size: 98%;
     background-position: center;
-    width: 400px;
-    height: 600px;
-    border-radius: 20px;
+    width: 400rem;
+    height: 600rem;
+    border-radius: 20rem;
     transition: all 1s;
     position: absolute;
     transform: rotateY(180deg);
@@ -36,13 +40,13 @@ body{
 
 .front{
     background-color: whitesmoke;
-    width: 400px;
-    height: 600px;
-    border-radius: 20px;
+    width: 400rem;
+    height: 600rem;
+    border-radius: 20rem;
     display: grid;
-    grid-template-rows: 100px 1fr 100px;
+    grid-template-rows: 100rem 1fr 100rem;
     grid-template-areas: 'up' 'img' 'down';
-    font-size: 40px;
+    font-size: 40rem;
     transition: all 1s;
     backface-visibility: hidden;
 }
@@ -64,18 +68,18 @@ body{
 
 .carta img.center{
     grid-area: img;
-    width: 200px;
+    width: 200rem;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 .carta img{
-    width: 50px;
+    width: 50rem;
 }
 
 .carta .front>div{
-    padding: 20px;
+    padding: 20rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,4 +92,20 @@ body{
 .carta .nome-carta-down{
     transform: rotate(180deg) translateX(-40%);
     grid-area: down;
+}
+
+@media (max-height: 630px){
+    :root{
+        font-size: 5.5%;
+    }
+}
+@media (max-height: 540px){
+    :root{
+        font-size: 4.5%;
+    }
+}
+@media (max-height: 440px){
+    :root{
+        font-size: 3.5%;
+    }
 }
