@@ -228,9 +228,13 @@ section#contato .button:active {
 
 }
 /* Moble L */
-@media (max-width: 426px){
+@media (max-width: 526px){
     :root{
         font-size: 72.5%;
+    }
+
+    header.banner{
+        background-position: 45%;
     }
 
     header.banner div.banner-content{
