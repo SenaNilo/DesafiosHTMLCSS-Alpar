@@ -103,37 +103,59 @@ header p {
     margin: 0;
 }
 
-aside { 
+#menu { 
     background-color: #4684ff;
     color: #fff;
     padding: 1.6rem 1.6rem 0.8rem;
-    width: 20rem;
+    width: 100%;
+    z-index: 999;
     position: fixed;
     top: 10rem;
-    display: none;
+    left: -110%;
     bottom: 0;
+    transition: 0.3s;
+}
+#menu.active{
+    left: 0;
+    display: flex;
 }
 
-aside a {
+#menu a {
     color: #fff;
 }
 
 nav{
+    width: 100%;
     height: 100%;
+    display: flex;
 }
 
 nav ul{
+    height: 80%;
+    width: 80%;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     list-style: none;
     padding: 0;
+    margin: auto;
+}
+nav ul li{
+    flex: 1;
+    display: flex;
 }
 nav ul a{
-    display: block;
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     opacity: 0.7;
     transition: 0.3s; /* Assim a propriedade dele será all quando nao especificada!!!! */
     position: relative;
     overflow: hidden;
+    font-size: 3.2rem;
 }
 
 nav ul a::before{
@@ -207,24 +229,37 @@ nav ul a:hover::before{
     opacity: 1;
 }
 
-.menu-button:active div{
+.menu-button.active div{
     transform: rotate(-45deg);
     /* opacity: 1; */
 }
-.menu-button:active div::after{
+.menu-button.active div::after{
     transform: rotate(-90deg);
     left: 0;
     bottom: 0;
     opacity: 1;
 }
-.menu-button:active div::before{
+.menu-button.active div::before{
     opacity: 0;
 }
 
 @media (min-width: 750px){
 
-    aside{
-        display: block;
+    #menu{
+        left: 0;
+        width: 20rem;
+    }
+    #menu nav ul a{
+        font-size: 1.6rem;
+        justify-content: flex-start;
+    }
+    #menu nav ul{
+        justify-content: flex-start;
+        gap: 1.6rem;
+    }
+    #menu nav ul li{
+        flex: 0;
+        max-height: fit-content;
     }
 
     main{
