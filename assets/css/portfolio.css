@@ -154,7 +154,7 @@ section.contatos>div p{
   display: inline-block;
   border-radius: 5em;
   transition: all 0.2s;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.6);
   font-weight: 500;
   color: rgb(255, 255, 255);
   background-color: #423b5e;
@@ -233,7 +233,7 @@ section.contatos>div p{
 }
 
 .social-btn:hover {
-  width: 150rem;
+  width: 170rem;
   border-radius: 5rem;
   background: #e3e3e3;
 }
@@ -244,7 +244,7 @@ section.contatos>div p{
 
 .social-btn:hover span {
   padding: 2rem;
-  width: 80rem;
+  width: 60%;;
 }
 
 #linkedin svg {
@@ -291,6 +291,9 @@ section.contatos>div p{
     font-size: 5.4%;
   }
   /* Padding 25rem de grade para o site  */
+  body{
+    font-size: 19rem;
+  }
 
   /* Nav - Menu */
   nav .mobile-menu{
@@ -393,7 +396,8 @@ section.contatos>div p{
     left: 0;
   }
 
-  .dropdown:active .dropdown-content {
+  .dropdown:active .dropdown-content,
+  .dropdown .dropdown-content.active {
     display: block;
   }
 
@@ -408,20 +412,24 @@ section.contatos>div p{
     flex-direction: column;
     padding: calc(9vh + 30rem) 30rem 30rem;
     height: 100vh;
+    justify-content: space-around;
   }
 
   header img{
-    width: 350rem;
-    height: 350rem;
+    width: 55%;
+    height: auto;
+    /* margin-top: 20rem */
   }
 
   section.habilidades img{
-    width: 400rem;
-    height: 400rem;
+    width: 100%;
+    height: auto;
   }
   section.habilidades{
+    align-items: flex-start;
     flex-direction: column;
-    padding: 50rem;
+    padding: 100rem;
+    /* font-size: 20rem; */
   }
 
   section.habilidades div.linguagens{
