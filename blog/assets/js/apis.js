@@ -27,7 +27,6 @@ fetch(url).then((response) => {
 })
 
 //Exemplo de como uma promise funciona
-
 //Nao entendi se isso faz parte da linha de cima: Perguntar dps
 const promise = new Promise(() => {
     resolve("Olá")
