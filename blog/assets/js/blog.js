@@ -383,10 +383,10 @@ function addPost(post){
 posts.forEach(addPost);
 
 
-menuButtonEl.onclick = () => {
+menuButtonEl.addEventListener('click', () => {
     const active = menuEl.classList.toggle("active")
     if(active)
         menuButtonEl.classList.toggle("active")
     else
         menuButtonEl.classList.toggle("active")
-}
+})
