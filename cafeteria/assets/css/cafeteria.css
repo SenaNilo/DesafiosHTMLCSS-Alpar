@@ -241,16 +241,14 @@ section#contato .button:active {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: center;
+        padding: 10rem 2rem;
+        background-color: rgba(0,0,0,0.76);
     }
 
     header.banner div.banner-content img{
         width: 90%;
         margin-bottom: -19rem;
-    }
-
-    header.banner div.banner-content{
-        align-items: center;
-        padding: 10rem 2rem;
     }
 
     header.banner div.banner-content p{
