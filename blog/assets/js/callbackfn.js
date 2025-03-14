@@ -36,10 +36,35 @@ console.log(verSeTem)
 const organizar = ls.sort((a,b) => {
     return b - a
 });
+console.log(organizar) 
 /*const organizarStrg = ls.sort((a,b) => {
     return a.localeCompare(b) //Retorna 1, 0 ou -1 - Ordenando sua Lista de Strings
 }) */
-console.log(organizar) 
+
+// function sortManual(lista, callbackfn){
+//     let lsTemp = []
+
+//     for (let i = 0; i < lista.length; i++) {
+
+//         for (let j = i + 1; j < lista.length; j++) {
+
+//             if (callbackfn(lista[i], lista[j]) > 0) {
+//                 lsTemp = lista[i]
+//                 lista[i] = lista[j]
+//                 lista[j] = lsTemp
+//             }
+
+//         }
+
+//     }
+
+//     console.log(lsTemp[0])
+// }
+
+console.log("SORT MANUAL: " + sortManual(ls, (a,b) => {return a+b}))
+
+
+
 
 //Reduce faz tudo, fazendo com que o 2 parametro passe para o antigo, como se fosse fibonacci - em suma - o reduce "Reduz" seu array para um valor só
 const reduzir = ls.reduce((antigo, atual) => {
@@ -49,13 +74,13 @@ const reduzir = ls.reduce((antigo, atual) => {
 console.log(reduzir)
 
 //Setar um tempo, para executar algo depois da quantidade de milisegundos passados como parametro
-setTimeout(() => {
-    console.log("Olá")
-}, 1000)
+// setTimeout(() => {
+//     console.log("Olá")
+// }, 1000)
 
 //Faz uma acao de tempos em tempos (definido por voce)
-let i = 0
-setInterval(() => {
-    console.log("olá: " + i )
-    i++
-}, 1000)
+// let i = 0
+// setInterval(() => {
+//     console.log("olá: " + i )
+//     i++
+// }, 1000)
