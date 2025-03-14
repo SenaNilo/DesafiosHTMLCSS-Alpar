@@ -23,9 +23,7 @@ async function criarPosts(qtdPosts){
             originEl.innerHTML = "Origin: " + json[i].breeds[0].origin + "<br>Weigth: " + json[i].breeds[0].weight.metric + "kg"
             
             imgEl.src = json[i].url
-            imgEl.style.maxHeight = "500rem";
-            imgEl.style.maxWidth = "100%";
-            imgEl.style.borderRadius = "10rem";
+            
         
 
             articleEl.appendChild(h2El)
