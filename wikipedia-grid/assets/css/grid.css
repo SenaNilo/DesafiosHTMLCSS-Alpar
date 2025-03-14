@@ -21,16 +21,19 @@ body{
     grid-template-areas: 'header header' 'aside main' 'footer footer';
     grid-template-rows: 120rem 1fr 100rem;
     grid-template-columns: 200rem 1fr;
-    background-color: whitesmoke;
+    background: url('../img/gramado.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
 }
 
 header{
     grid-area: header;
     background-color: #1a3e70;
     color: whitesmoke;
-    /* padding: 40rem; */
     place-items: center;
     place-content: center;
+    z-index: 1;
 }
 .menu-button {
     width: 32rem;
@@ -41,7 +44,7 @@ header{
     transform: translateY(-50%);
     border: 0;
     background: none;
-    display: block;
+    display: none;
     cursor: pointer;
 }
 
@@ -101,8 +104,10 @@ aside{
     position: relative;
     color: whitesmoke;
     padding: 20rem;
-    background-color: #00a19c;
+    background-color: #00a19ca8;
+    backdrop-filter: blur(8px);
     transition: 0.3s;
+    box-shadow: 5rem -10rem 20rem #00a19c;
 }
 aside nav {
     height: 100%;
@@ -137,35 +142,44 @@ aside ul li a{
 
 main{
     grid-area: main;
-    padding: 40rem 0 40rem 50rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    padding: 60rem;
 }
 main h2{
     margin-bottom: 30rem;
 }
 main article{
-    background-color: #00a19c;
+    background-color: #00a19c57;
+    backdrop-filter: blur(3px);
     padding: 40rem 50rem;
-    border: 5rem dashed #1a3e70;
+    border: 5rem dashed #88baff96;
     color: whitesmoke;
     border-radius: 10rem;
     box-shadow: 20rem 20rem 45rem 0rem rgba(0,0,0,0.45);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 article p {
-    text-indent: 15rem;
+    text-align: center;
+    margin-bottom: 30rem;
 }
 
 aside.imgs{
     background-color: unset;
+    padding: 2rem;
+    margin-left: 0;
+    margin-top: 30rem;
+
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
-    padding: 30rem;
-    margin-left: 40rem;
+    flex-direction: row-reverse;
+    align-items: center;
 }
 aside.imgs img{
-    width: 100%;
+    width: 30%;
     box-shadow: 20rem 20rem 45rem 0rem rgba(0,0,0,0.45);
     border: 5rem dashed #1a3e70;
     border-radius: 50%;
@@ -177,7 +191,9 @@ aside.imgs img~img{ /* Seletor de irmão adjacentes */
 footer{
     grid-area: footer;
     color: whitesmoke;
-    background-color: #0b1b31;
+    background-color: #0b1b31d6;
+    backdrop-filter: blur(6px);
+
     place-content: center;
     place-items: center;
 }
@@ -189,6 +205,9 @@ footer{
         grid-template-columns: 1fr;
         grid-template-rows: 120rem 1fr 100rem;
         position: relative;
+    }
+    .menu-button{
+        display: block;
     }
     aside#menu{
         z-index: 999;
@@ -203,6 +222,7 @@ footer{
         align-items: stretch;
         text-align: center;
         font-size: 19rem;
+        box-shadow: unset;
     } 
     aside#menu.active{
         top: 120rem;
