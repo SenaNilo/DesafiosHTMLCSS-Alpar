@@ -8,7 +8,7 @@ function foreach(array, callbackFn){
 
 const ls = [1, 2, 3, 4];
 
-foreach(ls, (e, idx, arrayCompleto,) => {
+foreach(ls, (e, idx, arrayCompleto) => {
     console.log(e + " " + idx + " [" + arrayCompleto + "]")
 })
 
@@ -33,36 +33,32 @@ const verSeTem = ls.includes(2);
 console.log(verSeTem) 
 
 //ele usa uma callbackfn para testar a sua condicao dentro da lista, organizando os itens dependendo de sua regra de negócio. Desafio: Fazer uma funcao sort para organizar
-const organizar = ls.sort((a,b) => {
-    return b - a
-});
-console.log(organizar) 
+// const organizar = ls.sort((a,b) => {
+//     return  b - a
+// });
+// console.log(organizar) 
 /*const organizarStrg = ls.sort((a,b) => {
     return a.localeCompare(b) //Retorna 1, 0 ou -1 - Ordenando sua Lista de Strings
 }) */
 
-// function sortManual(lista, callbackfn){
-//     let lsTemp = []
+function sortManual(lista, cbFn) {
+    for (let i = 0; i < lista.length - 1; i++) {
+        for (let j = i + 1; j < lista.length; j++) {
+            if (cbFn(lista[i], lista[j]) > 0) {
+                let aux = lista[i];
+                lista[i] = lista[j];
+                lista[j] = aux;
+            }
+        }
+    }
+    return lista; 
+}
 
-//     for (let i = 0; i < lista.length; i++) {
+var a = [1,5,6,7,4]
 
-//         for (let j = i + 1; j < lista.length; j++) {
+console.log("SORT MANUAL: " + sortManual(a, (a,b) => a - b))
 
-//             if (callbackfn(lista[i], lista[j]) > 0) {
-//                 lsTemp = lista[i]
-//                 lista[i] = lista[j]
-//                 lista[j] = lsTemp
-//             }
-
-//         }
-
-//     }
-
-//     console.log(lsTemp[0])
-// }
-
-console.log("SORT MANUAL: " + sortManual(ls, (a,b) => {return a+b}))
-
+console.log(a)
 
 
 
