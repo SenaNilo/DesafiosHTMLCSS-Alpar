@@ -291,6 +291,12 @@ footer {
     text-align: center;
 }
 
+.material-symbols-outlined img {
+    display: inline;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 1,
