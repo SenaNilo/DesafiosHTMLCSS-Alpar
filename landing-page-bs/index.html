@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Aula</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <header>
+        <nav class="navbar navbar-expand-sm bg-dark shadow ">
+            <div class="container">
+              <a href="#" class="navbar-brand"><span class="fw-bold text-light">Landing-Page</span></a>
+      
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarDropdown"
+                aria-controls="navbarDropdown"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+      
+      
+              <div class="collapse navbar-collapse" id="navbarDropdown">
+                <ul class="navbar-nav ms-auto ">
+                  <li class="nav-item ">
+                    <a href="#hero" class="nav-link active text-light" aria-current="page">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#servicos" class="nav-link text-light">Serviços</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#footer" class="nav-link text-light">Rodapé</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#footer" class="nav-link text-light">Contato</a>
+                  </li>
+                </ul>
+      
+              </div>
+      
+            </div>
+          </nav>
+    </header>
+
+    <main class="container mt-5 pt-4">
+      <section id="hero" class="row d-flex align-items-center justify-content-center">
+        <div class="col d-flex flex-column">
+            <h1 class="display-2 fw-bold"><span class="text-primary">Hero</span> Section</h1>
+            <p class="lead">Sessão inicial do desafio: Landing Page com Bootstrap</p>
+        </div>
+
+        <div class="col-7">
+            <img class="img-fluid" src="./assets/img/undraw_be-the-hero_bce0.svg" alt="be the hero">
+        </div>
+      </section>
+
+      <section id="servicos" class="row row-md-cols-2 mt-5 mb-5 d-flex justify-content-center">
+        <h2 class="text-center display-5 fw-bold ">Serviços</h2>
+
+        <div class="row container-fluid gy-4">
+            <div class="col-lg col-md">
+                <div class="card">
+                    <img src="./assets/img/sistemaWeb.jpg" class="card-img-top" alt="Codigos para sites">
+                    <div class="card-body">
+                        <h5 class="card-title">Web Design</h5>
+                        <p class="card-text">Ofereçemos um site feito inteiramente para você, personalizado e ideal para você!</p>
+                        <a href="#" class="btn btn-primary">Solicitar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg col-md">
+                <div class="card">
+                    <img src="./assets/img/security.jpg" class="card-img-top" alt="Imagem de um botao escrito segurança">
+                    <div class="card-body">
+                        <h5 class="card-title">CiberSecurity</h5>
+                        <p class="card-text">Serviço de segurança para seu sistema, programa ou semelhantes.</p>
+                        <a href="#" class="btn btn-primary">Solicitar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg">
+                <div class="card">
+                    <img src="./assets/img/designGrafico.jpg" class="card-img-top" alt="Imagem de wireframes, design inicial de páginas web">
+                    <div class="card-body">
+                        <h5 class="card-title">Design Digital</h5>
+                        <p class="card-text">Serviço focado em design de logos, design de sites, de posts, vídeos... Entre em contato para saber mais!</p>
+                        <a href="#" class="btn btn-primary">Solicitar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>      
+    </main>
+
+    <footer id="footer" class="bg-dark container-fluid text-light p-4">
+
+        <div class="row gy-4 p-4">
+            <h2 class="col-sm-12">Rodapé</h2>
+            <div class="col-sm fs-5">
+                <span>Voltar para:</span>
+                <ul>
+                    <a class="text-light" href="#hero">
+                        <li>Hero</li>
+                    </a>
+                    <a class="text-light" href="#servicos">
+                        <li>Serviços</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="col-sm fs-5">
+                <span>Contatos:</span>
+                <ul>
+                    <li>Email</li>
+                    <li>Linkedin</li>
+                    <li>Github</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  </body>
+</html>
