@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-:root{
+:root {
   font-size: 6.25%;
 }
 
@@ -14,7 +14,7 @@ html {
   font-family: 'Poppins', sans-serif;
 }
 
-body{
+body {
   font-size: 16rem;
   background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(24, 4, 61, 1) 100%);
 }
@@ -32,11 +32,12 @@ nav ul {
   padding: 3vh 0;
   transition: 0.3s;
 }
+
 nav .mobile-menu {
   display: none;
 }
 
-.btn.dropdown:hover{
+.btn.dropdown:hover {
   border-radius: 10rem;
 }
 
@@ -50,16 +51,19 @@ nav .dropdown-content {
   transform: translate(-13%, 15rem);
   border-radius: 5rem;
 }
-nav .dropdown-content a{
+
+nav .dropdown-content a {
   display: block;
   text-decoration: none;
   color: #d1d1d1;
   padding: 15rem;
   background: unset;
 }
-nav .dropdown-content a:hover{
+
+nav .dropdown-content a:hover {
   background-color: #24133f;
 }
+
 .dropdown-content a:hover {
   transform: translateY(-3rem);
   box-shadow: 0 10rem 20rem rgba(0, 0, 0, 0.2);
@@ -69,7 +73,8 @@ nav .dropdown-content a:hover{
   transform: translateY(-1rem);
   box-shadow: 0 5rem 10rem rgba(0, 0, 0, 0.2);
 }
-.dropdown:hover .dropdown-content{
+
+.dropdown:hover .dropdown-content {
   display: block;
 }
 
@@ -130,18 +135,21 @@ section.contatos {
   display: flex;
   justify-content: space-around;
 }
-section.contatos>div p{
+
+section.contatos>div p {
   margin-bottom: 10rem;
 }
 
-.email ul{
+.email ul {
   margin-top: 15rem;
   list-style-type: none;
 }
-.email ul a{
+
+.email ul a {
   color: white;
 }
-.email ul a:visited{
+
+.email ul a:visited {
   color: rgb(120, 120, 120);
 }
 
@@ -187,7 +195,7 @@ section.contatos>div p{
   background-color: #fff;
 }
 
-.btn:hover::after{
+.btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
 }
@@ -244,7 +252,8 @@ section.contatos>div p{
 
 .social-btn:hover span {
   padding: 2rem;
-  width: 60%;;
+  width: 60%;
+  ;
 }
 
 #linkedin svg {
@@ -256,47 +265,59 @@ section.contatos>div p{
 }
 
 /* Animações */
-@keyframes shadow-change{
-  0%, 100%{
+@keyframes shadow-change {
+
+  0%,
+  100% {
     box-shadow: 0rem 0rem 15rem 0rem #7d68ad;
   }
-  25%{
+
+  25% {
     box-shadow: 0rem 0rem 15rem 2rem #12a8ed;
   }
-  50%{
+
+  50% {
     box-shadow: 0rem 0rem 15rem 4rem #7d68ad;
   }
-  75%{
+
+  75% {
     box-shadow: 0rem 0rem 15rem 8rem #12a8ed;
   }
 }
-@keyframes shadow-change-black{
-  0%, 100%{
+
+@keyframes shadow-change-black {
+
+  0%,
+  100% {
     box-shadow: 0rem 0rem 15rem #000;
   }
-  25%{
+
+  25% {
     box-shadow: 0rem 0rem 15rem #939393;
   }
-  50%{
+
+  50% {
     box-shadow: 0rem 0rem 15rem #000;
   }
-  75%{
+
+  75% {
     box-shadow: 0rem 0rem 15rem #939393;
   }
 }
 
 /* Responsividade */
-@media (max-width: 770px){
-  :root{
+@media (max-width: 850px) {
+  :root {
     font-size: 5.4%;
   }
+
   /* Padding 25rem de grade para o site  */
-  body{
+  body {
     font-size: 19rem;
   }
 
   /* Nav - Menu */
-  nav .mobile-menu{
+  nav .mobile-menu {
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(24, 4, 61, 1) 100%);
     color: whitesmoke;
     font-size: 20rem;
@@ -321,59 +342,62 @@ section.contatos>div p{
     cursor: pointer;
   }
 
-  .menu-button div{
-      height: 5rem;
-      width: 32rem;
-      background-color: #fff;
-      border-radius: 10rem;
-      position: relative;
-      transition: 0.3s;
+  .menu-button div {
+    height: 5rem;
+    width: 32rem;
+    background-color: #fff;
+    border-radius: 10rem;
+    position: relative;
+    transition: 0.3s;
   }
 
-  .menu-button div::before{
-      content: '';
-      height: 5rem;
-      width: 32rem;
-      background-color: #fff;
-      border-radius: 10rem;
-      position: absolute;
-      left: 0;
-      transition: 0.3s;
-      top: -10rem;
-      opacity: 1;
-  }
-  .menu-button div::after{
-      content: '';
-      height: 5rem;
-      width: 32rem;
-      background-color: #fff;
-      border-radius: 10rem;
-      position: absolute;
-      transition: 0.3s;
-      left: 0;
-      bottom: -10rem;
+  .menu-button div::before {
+    content: '';
+    height: 5rem;
+    width: 32rem;
+    background-color: #fff;
+    border-radius: 10rem;
+    position: absolute;
+    left: 0;
+    transition: 0.3s;
+    top: -10rem;
+    opacity: 1;
   }
 
-  .menu-button:hover div{
-      opacity: 1;
+  .menu-button div::after {
+    content: '';
+    height: 5rem;
+    width: 32rem;
+    background-color: #fff;
+    border-radius: 10rem;
+    position: absolute;
+    transition: 0.3s;
+    left: 0;
+    bottom: -10rem;
   }
 
-  .menu-button.active div{
-      transform: rotate(-45deg);
-      /* opacity: 1; */
+  .menu-button:hover div {
+    opacity: 1;
   }
-  .menu-button.active div::after{
-      transform: rotate(-90deg);
-      left: 0;
-      bottom: 0;
-      opacity: 1;
+
+  .menu-button.active div {
+    transform: rotate(-45deg);
+    /* opacity: 1; */
   }
-  .menu-button.active div::before{
-      opacity: 0;
+
+  .menu-button.active div::after {
+    transform: rotate(-90deg);
+    left: 0;
+    bottom: 0;
+    opacity: 1;
+  }
+
+  .menu-button.active div::before {
+    opacity: 0;
   }
 
 
-  nav ul.menu-links{
+  nav ul.menu-links {
     /* display: none; */
     position: fixed;
     top: -100%;
@@ -384,14 +408,16 @@ section.contatos>div p{
     height: 95vh;
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(24, 4, 61, 1) 100%);
   }
-  nav ul.menu-links div{
+
+  nav ul.menu-links div {
     width: 100%;
   }
-  nav ul.menu-links.active{
+
+  nav ul.menu-links.active {
     top: 8%;
   }
 
-  nav .dropdown .dropdown-content{
+  nav .dropdown .dropdown-content {
     transform: translateY(15rem);
     left: 0;
   }
@@ -401,49 +427,52 @@ section.contatos>div p{
     display: block;
   }
 
-  .btn{
+  .btn {
     position: static;
   }
-  .btn::after{
+
+  .btn::after {
     content: unset;
   }
 
-  header{
+  header {
     flex-direction: column;
     padding: calc(9vh + 30rem) 30rem 50rem;
     height: auto;
     justify-content: space-around;
   }
 
-  header img{
+  header img {
     width: calc(100% - 40rem);
     height: auto;
     /* margin-top: 20rem */
   }
 
-  section.habilidades{
+  section.habilidades {
     align-items: flex-start;
     flex-direction: column;
     padding: 50rem;
   }
-  section.habilidades img{
+
+  section.habilidades img {
     width: 100%;
     height: auto;
   }
 
-  section.habilidades div.linguagens{
+  section.habilidades div.linguagens {
     margin: 60rem 0 0;
   }
 
-  section.contatos{
+  section.contatos {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  section.contatos div.email{
+  section.contatos div.email {
     margin-top: 50rem;
   }
-  section.contatos div.email ul{
+
+  section.contatos div.email ul {
     margin: auto;
   }
 }
