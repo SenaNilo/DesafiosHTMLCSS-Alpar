@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulário em Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  </head>
+  <body class="min-vh-100 d-flex align-items-center justify-content-center bg-dark">
+    <!-- <div class="alert alert-success m-3" id="success" role="alert">
+        <h4 class="alert-heading">Envio de Formulário Concluído!</h4>
+        <hr>
+        <p class="mb-0">dados</p>
+    </div> -->
+    <div id="alerta"></div>
+    <main class="container">   
+           
+        <div class="row mb-5 align-items-center ">
+            <div class="col-lg">
+                <h1 class="display-1 mb-5 fw-bold fs-1 text-white text-center text-lg-start">Formulário em Bootstrap</h1>
+            </div>
+            <div class="col-lg">
+                <div class="border rounded-5 p-5">
+                <!-- Nome, email, assunto e mensagem
+                tem que ter label, input, checkbox, select
+                feedbackvisual
+                assunto = select
+                btn = btn btn primary
+                mostrar mensagem de sucesso ao enviar o forms 
+                -->
+                
+                    <form novalidate class="needs-validation text-white">
+                        <div class="row">
+                            <div class="col-md">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" name="nome" id="nome" required placeholder>
+                                    <div class="invalid-feedback">
+                                        Por favor, insira seu nome
+                                    </div>
+                                    <label for="nome">Nome</label>
+                                </div>
+                            </div>
+                            <div class="col-md">
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" name="email" id="email" required placeholder>
+                                    <div class="invalid-feedback">
+                                        Por favor, insira um e-mail válido
+                                    </div>
+                                    <label for="email">E-mail</label>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="form-floating">
+                                    <select class="form-select mb-3" name="subject" id="subject" aria-label="Assunto" required placeholder>
+                                        <option selected disabled value="">Selecione</option>
+                                        <option value="1">Quero te contratar!</option>
+                                        <option value="2">Você foi promovido!</option>
+                                        <option value="3">Passou na prova!</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Por favor, selecione um assunto
+                                    </div>
+                                    <label for="subject">Assunto</label>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="form-floating">
+                                    <textarea class="form-control mb-3" name="msg" id="msg" rows="3" placeholder required></textarea>
+                                    <label for="msg">Mensagem</label>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" value="" id="aceite" required>
+                                    <label class="form-check-label" for="aceite">
+                                        Aceito os termos e condições
+                                    </label>
+                                    <div class="invalid-feedback">
+                                        Voce deve aceitar os termos para prosseguir
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <button type="submit" class="btn btn-primary w-100">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+            'use strict'
+        
+            const forms = document.querySelectorAll('.needs-validation')
+            const alertDiv = document.createElement('div');
+            const heading = document.createElement('h4');
+            const hr = document.createElement('hr');
+            const paragraph = document.createElement('p');
+            const alerta = document.getElementById('alerta')
+            
+            alertDiv.className = 'alert alert-success m-3';
+            alertDiv.id = 'success';
+            alertDiv.setAttribute('role', 'alert');
+
+            heading.className = 'alert-heading';
+            heading.textContent = 'Envio de Formulário Concluído!';
+
+            paragraph.className = 'mb-0';
+            alertDiv.appendChild(heading);
+            alertDiv.appendChild(hr);
+            alertDiv.appendChild(paragraph);
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    //Se nao for validade
+                    event.preventDefault()
+                    event.stopPropagation()
+                }else{
+                    //Quando estiver validado
+                    event.preventDefault()
+                    //Depois de um tempo com o alert na tela, o forms irá dar submit, seguindo na sua programacao padrao
+                    setTimeout(() => {
+                        form.submit()
+                    }, 3000)
+                    const nome = document.getElementById('nome').value
+                    const email = document.getElementById('email').value
+                    const assunto = document.getElementById('subject').value
+                    const msg = document.getElementById('msg').value
+                    paragraph.textContent = 'Nome: ' +nome+ ' | Email: '+email+' | Assunto: '+assunto+' | Mensagem: '+ msg;
+
+                    alerta.appendChild(alertDiv);
+                }
+
+        
+                form.classList.add('was-validated')
+            }, false)
+            })
+        })()
+    </script>
+    <script>
+    </script>
+  </body>
+</html>
