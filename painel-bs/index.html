@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Painel em Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  </head>
+  <body class="bg-dark">
+    
+    <!-- navbarFF, cardFF, buttonFF, badge, alertFF
+     
+    3 cards com icones, titulos e descricoes,FF
+    
+    alerta de boas vindas (alert alert-success)FF
+    
+    navbar com links e badge de notificacoes
+    -->
+    <header>
+        <nav class="navbar navbar-expand-sm bg-dark shadow ">
+            <div class="container">
+              <a href="#" class="navbar-brand"><span class="fw-bold text-light">Painel</span></a>
+      
+              <button
+                class="navbar-toggler bg-light"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarDropdown"
+                aria-controls="navbarDropdown"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+      
+      
+              <div class="collapse navbar-collapse" id="navbarDropdown">
+                <ul class="navbar-nav ms-auto me-4">
+                  <li class="nav-item ">
+                    <a href="../" class="nav-link active text-light" aria-current="page">Voltar</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#cards" class="nav-link text-light">Cards</a>
+                  </li>
+                </ul>
+                <button type="button" class="btn btn-outline-primary position-relative">
+                  Inbox
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    3
+                    <span class="visually-hidden">mensagens nao lidas</span>
+                  </span>
+                </button>
+              </div>
+
+            </div>
+        </nav>
+    </header>
+    
+    <div class="alert alert-success alert-dismissible fade show mx-5 mt-3" id="success" role="alert">
+        <h4 class="alert-heading">Seja Bem Vindo!</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <main class="container-fluid">
+        <div id="cards" class="row row-cols-sm-2 row-cols-md-3 gy-3 p-5 ">
+            <div class="col">
+                <div class="card mx-auto bg-dark text-white border-warning mb-3" style="max-width: 18rem;">
+                    <div class="card-header bg-transparent border-warning d-flex align-items-center">
+                        <img class="img-fluid me-2" width="30" src="./assets/img/envelope-solid.svg" alt="">
+                        Nova Mensagem
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Assunto</h5>
+                      <p class="card-text">Olá, estou entrando em contato para você participar de nosso programa! O famoso Rocket</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-warning">
+                        <div class="btn-group" role="group" aria-label="Basic outlined example">
+                            <button type="button" class="btn btn-hover btn-outline-info">Ler</button>
+                            <button type="button" class="btn btn-hover btn-outline-light">Span</button>
+                            <button type="button" class="btn btn-hover btn-outline-danger">Deletar</button>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card mx-auto bg-dark text-white border-warning mb-3" style="max-width: 18rem;">
+                    <div class="card-header bg-transparent border-warning d-flex align-items-center">
+                        <img class="img-fluid me-2" width="30" src="./assets/img/envelope-solid.svg" alt="">
+                        Nova Mensagem
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Assunto</h5>
+                      <p class="card-text">Olá, estou entrando em contato para você participar de nosso programa! O famoso Rocket</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-warning">
+                        <div class="btn-group" role="group" aria-label="Basic outlined example">
+                            <button type="button" class="btn btn-hover btn-outline-info">Ler</button>
+                            <button type="button" class="btn btn-hover btn-outline-light">Span</button>
+                            <button type="button" class="btn btn-hover btn-outline-danger">Deletar</button>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col">
+                <div class="card mx-auto bg-dark text-white border-warning mb-3" style="max-width: 18rem;">
+                    <div class="card-header bg-transparent border-warning d-flex align-items-center">
+                        <img class="img-fluid me-2" width="30" src="./assets/img/envelope-solid.svg" alt="">
+                        Nova Mensagem
+                    </div>
+                    <div class="card-body">
+                      <h5 class="card-title">Assunto</h5>
+                      <p class="card-text">Olá, estou entrando em contato para você participar de nosso programa! O famoso Rocket</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-warning">
+                        <div class="btn-group" role="group" aria-label="Basic outlined example">
+                            <button type="button" class="btn btn-hover btn-outline-info">Ler</button>
+                            <button type="button" class="btn btn-hover btn-outline-light">Span</button>
+                            <button type="button" class="btn btn-hover btn-outline-danger">Deletar</button>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            
+        </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  </body>
+</html>
