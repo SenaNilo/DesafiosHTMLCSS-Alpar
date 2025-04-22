@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <script src='login.js'></script>
+    <script src='users.js'></script>
+    <script>
+        //Pegar itens do localsorage
+        const userString = localStorage.getItem('user')
+        const userObj = JSON.parse(userString)
+        var user = new Usuario()
+
+        if(userObj._materias){
+            user = new Professor(
+                userObj._nome,
+                userObj._email,
+                userObj._senha,
+                userObj._materias
+            )
+            user.exibirPerfil()
+        }else{
+            user = new Aluno(
+                userObj._nome,
+                userObj._email,
+                userObj._senha,
+                userObj._turma
+            )
+            user.exibirPerfil()
+        }
+        
+        document.title = `Página de ${user._nome}`;
+    </script>
+    <!-- <title>Página de </title> -->
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+<body class="min-vh-100 d-flex flex-column align-items-center justify-content-center bg-dark text-white">
+    <main class="d-flex flex-column align-items-center">
+        <h1 class="display-1">Seja bem vindo <span class="text-primary fw-bold" id="nome"></span></h1>
+        <p class="display-6">Seu email: <span class="text-primary fw-bold" id="email"></span></p>
+    </main>
+
+    <script>
+        const nomeHtml = document.querySelector('#nome')
+        const emailHTML = document.querySelector('#email')
+
+        nomeHtml.innerHTML += user.getNome()
+        emailHTML.innerHTML += user.getEmail()
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>

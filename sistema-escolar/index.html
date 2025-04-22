@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Sistema Escolar | Login</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script>
+        localStorage.clear()
+    </script>
+    <!-- 
+    Lista de usuarios cadastrados
+        let nilo = new Professor('danilo', 'eilm@gmail', 'senha', exatas)
+        let caco = new Professor('Caio', 'caco@gmail', '456', humanas)
+        let cesar = new Aluno('Cesar', 'cece@gmail', '1234', 'SI')
+        let oliver = new Aluno('Oliver', 'oli@gmail', 'oli123', 'CD') 
+    -->
+</head>
+<body  class="min-vh-100 d-flex flex-column align-items-center justify-content-center bg-dark">
+    
+    <main class="container">   
+           
+        <div class="row mb-5 align-items-center ">
+            <div class="col-lg">
+                <h1 class="display-1 mb-5 fw-bold fs-1 text-white text-center text-lg-start">Logue-se No Sistema Escolar</h1>
+            </div>
+            <div class="col-lg">
+                <div class="border rounded-5 p-5">
+                <!-- Nome, email, assunto e mensagem
+                tem que ter label, input, checkbox, select
+                feedbackvisual
+                assunto = select
+                btn = btn btn primary
+                mostrar mensagem de sucesso ao enviar o forms 
+                -->
+                
+                    <form novalidate class="needs-validation text-white">
+                        <div class="row">
+                    
+                            <div class="col-lg">
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" name="email" id="email" required placeholder>
+                                    <div class="invalid-feedback">
+                                        Por favor, insira um e-mail válido
+                                    </div>
+                                    <label for="email">E-mail</label>
+                                </div>
+                            </div>
+
+                            <div class="col-lg">
+                                <div class="form-floating mb-3">
+                                    <input type="password" class="form-control" name="senha" id="senha" required placeholder>
+                                    <div class="invalid-feedback">
+                                        Por favor, insira seu senha
+                                    </div>
+                                    <label for="senha">Senha</label>
+                                </div>
+                            </div>
+                            <div class="w-100" id="alerta"></div>
+                            <div>
+                                <button type="submit" class="btn btn-primary w-100">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+    <script src='login.js'></script>
+    <script src='users.js'></script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+            'use strict'
+        
+            const forms = document.querySelectorAll('.needs-validation')
+            const alerta = document.getElementById('alerta')
+            
+            // Alert div
+            const alertDiv = document.createElement('div');
+            const heading = document.createElement('h4');
+            
+            alertDiv.className = 'alert alert-danger m-3';
+            alertDiv.id = 'danger';
+            alertDiv.setAttribute('role', 'alert');
+
+            heading.className = 'alert-heading';
+            heading.textContent = 'Email ou Senha Incorretos!';
+
+            alertDiv.appendChild(heading);
+        
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    //Se nao for validade ele para e mostra os erros
+                    event.preventDefault()
+                    event.stopPropagation()
+                }else{
+                    event.preventDefault()
+                    //Quando estiver validado, precisamos conferir se existe um login, por que se existir deve-se guardalo no localstorage e mudar para outra pagina
+                    const email = document.querySelector('#email').value
+                    const senha = document.querySelector('#senha').value
+
+                    if(listaUsers.login(email, senha)){
+                        //localStorage e rtedirecionamento
+                        
+                        const user = listaUsers.getUser(email, senha)
+
+                        localStorage.setItem('user', JSON.stringify(user))
+                        window.location.href = "showUser.html"
+                    }else{
+                        alerta.appendChild(alertDiv);
+                    }
+                }
+
+        
+                form.classList.add('was-validated')
+            }, false)
+            })
+        })()
+    </script>
+</body>
+</html>
