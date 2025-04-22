@@ -9,27 +9,18 @@
         //Pegar itens do localsorage
         const userString = localStorage.getItem('user')
         const userObj = JSON.parse(userString)
-        var user = new Usuario()
+        window.user = new Usuario()
 
-        if(userObj._materias){
-            user = new Professor(
-                userObj._nome,
-                userObj._email,
-                userObj._senha,
-                userObj._materias
-            )
-            user.exibirPerfil()
+        if(userObj._tipo === "professor"){
+            user = Object.assign(new Professor(), userObj)
+            
         }else{
-            user = new Aluno(
-                userObj._nome,
-                userObj._email,
-                userObj._senha,
-                userObj._turma
-            )
-            user.exibirPerfil()
+            user = Object.assign(new Aluno(), userObj)
+            
         }
-        
-        document.title = `Página de ${user._nome}`;
+
+        user.exibirPerfil()
+        document.title = `Página de ${user.nome}`;
     </script>
     <!-- <title>Página de </title> -->
     <meta name='viewport' content='width=device-width, initial-scale=1'>

@@ -2,11 +2,19 @@ class Usuario {
     _nome
     _email
     _senha
+    _tipo
 
     constructor(nome, email, senha){
         this.nome = nome
         this.email = email
         this.senha = senha
+    }
+
+    set tipo(tipo){
+        this._tipo = tipo
+    }
+    get tipo(){
+        return this._tipo
     }
     
     set nome(nome){
@@ -39,6 +47,7 @@ class Aluno extends Usuario {
     constructor(nome, email, senha, turma){
         super(nome, email, senha)
         this.turma = turma
+        this.tipo = "aluno"
     }
 
     set turma(turma){
@@ -72,6 +81,7 @@ class Professor extends Usuario {
     constructor(nome, email, senha, materias){
         super(nome, email, senha)
         this.materias = materias
+        this.tipo = "professor"
     }
 
     set materias(materias){
