@@ -16,7 +16,10 @@ class CentralDeLuzes {
     }
 
     static getInstance(){
-        return CentralDeLuzes.instance
+        if(!CentralDeLuzes.instance)
+            new Singleton();
+        
+        return this.instance
     }
 }
 
