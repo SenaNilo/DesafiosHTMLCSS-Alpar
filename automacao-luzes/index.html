@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='assets/CentralDeLuzes.js'></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+    <!-- 
+    pegar data- em html
+        const elemento = document.querySelector('div[data-data-a-ser-lida]');
+
+        if (elemento) {
+        const data = elemento.dataset.dataASerLida; // Vai retornar "2025-04-24"
+        console.log(data);
+        }
+    -->
+</head>
+<body class="min-vh-100 d-flex flex-column align-items-center text-white justify-content-center bg-dark">
+    <main>
+        <div class="row gx-4">
+            <div style="height: 50px;" class="border-light border col-12" id="quintal"></div>
+            <div style="height: 100px;" class="border-light border col" id="sala"></div>
+            <div style="height: 100px;" class="border-light border col-2" id="banheiro"></div>
+            <div style="height: 100px;" class="border-light border col" id="quarto"></div>
+        </div>
+        <div class="row gy-3 mt-4 align-items-center justify-content-center d-flex">
+            <button class="btn mx-2 col-5 btn-light" data-comodo="quarto">Quarto</button>
+            <button class="btn mx-2 col-5 btn-light" data-comodo="sala">Sala</button>
+            <button class="btn mx-2 col-5 btn-light" data-comodo="banheiro">Banheiro</button>
+            <button class="btn mx-2 col-5 btn-light" data-comodo="quintal">Quintal</button>
+        </div>
+        <div class="d-flex justify-content-center mt-4">
+            <h3 class="display-6 position-absolute" id="msg"></h3>
+        </div>
+    </main>
+
+    <script src="assets/interruptor.js"></script>
+</body>
+</html>
