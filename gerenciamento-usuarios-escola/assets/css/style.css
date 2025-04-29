@@ -5,7 +5,7 @@
 }
 
 :root{
-    font-size: 62.5%;
+    /* font-size: 62.5%; */
 }
 
 body{
@@ -16,20 +16,23 @@ body{
 	background: linear-gradient(45deg, #49a09d, #5f2c82);
 	font-family: sans-serif;
 	font-weight: 100;
+	overflow-x: hidden
 }
 header{
 	font-size: 1.6rem;
+	background-color: #183433bd
 }
 
 .tabela {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	position: relative;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	height: auto;
 }
 
 table {
-	width: 800px;
+	width: 950px;
 	border-collapse: collapse;
 	overflow: hidden;
 	box-shadow: 0 0 20px rgba(0,0,0,0.1);
@@ -55,6 +58,10 @@ thead, tfoot {
 	}
 	th {
 		background-color: #55608f;
+	}
+	th:nth-child(4) {
+		background-color: #763636;
+		text-align: center
 	}
 }
 tfoot{
@@ -93,5 +100,158 @@ tbody {
 				z-index: -1;
 			}
 		}
+		button{
+			height: 2.4rem;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: none;
+			background: none;
+			color: #763636;
+			opacity: 0.5;
+			transition: 0.3s;
+			&:hover{
+				opacity: 1;
+			}
+		}
 	}
 }
+
+#adicionar{
+	transform: translate(-1rem, -1rem);
+	cursor: pointer;
+	span{
+		font-size: 100px;
+		color: #49a06a;
+		opacity: 0.5;
+		transition: 0.3s;
+		&:hover{
+			opacity: 1;
+			color: #65d791;
+		}
+	}
+}
+#filtro{
+	width: 28.0rem;
+}
+
+/* .modal-container{
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal{
+    padding: 1.6rem;
+    background: var(--medium-color);
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    max-height: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 1.6rem;
+    color: var(--light-color);
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    z-index: 2;
+}
+
+.modal h2{
+    padding-right: 4.8rem;
+}
+
+.modal form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.modal label{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem
+}
+
+.modal input{
+    width: 100%;
+    padding: 0.8rem;
+    font-family: 'Poppins', sans-serif;
+    border: 0.2rem solid var(--dark-color);
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    font-size: 1.6rem;
+    border-radius: 0.8rem;
+}
+
+.modal input[type="date"]::-webkit-calendar-picker-indicator{
+    cursor: pointer;
+    filter: invert(1);
+}
+
+.modal button{
+    font-size: 1.6rem;
+    background-color: var(--primary-color);
+    padding: 0.8rem;
+    height: 4rem;
+    border: none;
+    font-weight: bolder;
+    border-radius: 0.8rem;
+    box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.2);
+    margin-top: 0.8rem;
+}
+
+.modal .send{
+    background-color: var(--primary-color);
+    padding: 0.8rem;
+    height: 4rem;
+    border: none;
+    font-weight: bolder;
+    box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.2);
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0.8rem;
+}
+
+.modal .close{
+    background: transparent;
+    border: none;
+    color: var(--light-color);
+    opacity: 0.5;
+    width: 3.2rem;
+    height: 3.2rem;
+    position: absolute;
+    top: 1rem;
+    right: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.modal .close:hover{
+    background: var(--dark-color);
+    opacity: 1;
+}
+
+.giant-close-button{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: none;
+    background: none;
+    cursor: default;
+    z-index: 2;
+} */

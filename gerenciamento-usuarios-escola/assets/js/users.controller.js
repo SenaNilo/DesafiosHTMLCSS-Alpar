@@ -1,6 +1,4 @@
-const app = angular.module("managerModule" , [])
-
-app.controller("UsuarioController", function ($scope) {
+app.controller("UsuarioController", function ($scope, UserService) {
     $scope.usuarios = [
         { nome: "Tobias Gabriel", tipo: "Aluno", dataCadastro: new Date('2025-04-20') },
         { nome: "Maria Souza", tipo: "Professor", dataCadastro: new Date('2025-04-19') },
@@ -13,38 +11,60 @@ app.controller("UsuarioController", function ($scope) {
         { nome: "Lucas Gabriel", tipo: "Aluno", dataCadastro: new Date('2025-04-12') },
         { nome: "Beatriz Almeida", tipo: "Professor", dataCadastro: new Date('2025-04-11') }
     ];
+
+    if(!localStorage.getItem("users"))
+        UserService.inicializar($scope.usuarios)
+    
 });
 
-app.controller("AppController", function ($scope, $filter) {
+app.controller("AppController", function ($scope, $filter, UserService) {
+    $scope.modal = false
     $scope.mensagem = "Bem-vindo ao sistema de cadastro escolar";
     $scope.filtroTipoAluno = false
     $scope.filtroTipoProfessor = false
     $scope.filtro = ""
-
-    if($scope.filtroTipoAluno){
-        $scope.filtroTipoAluno = true
-        $scope.filtroTipoProfessor = false
+    $scope.users = UserService.listar()
+    $scope.userInput = {
+        id: 0,
+        nome: "",
+        tipo: "",
     }
-    if($scope.filtroTipoProfessor){
-        $scope.filtroTipoProfessor = true
-        $scope.filtroTipoAluno = false
+    $scope.select = true
+
+    $scope.toggleModal = () => {
+        $scope.modal = !$scope.modal
     }
 
     $scope.filteredUsers = function () {
         let filtered = $filter("filter")(
             $filter("filter")(
                 $filter("filter")(
-                    $scope.usuarios,
+                    $scope.users,
                     $scope.filtroTipoAluno ? { tipo: "Aluno" } : {}
                 ),
                 $scope.filtroTipoProfessor ? { tipo: "Professor" } : {}
             ),
             $scope.filtro ? { nome:  $scope.filtro } : {}
         )
-        
-        
 
         return filtered
+    }
+
+    $scope.adicionarUser = function () {
+        $scope.userInput.id = Math.random().toString(36).substring(2, 9)
+
+        UserService.adicionar($scope.userInput)
+
+        $scope.toggleModal()
+
+        $scope.users = UserService.listar()
+    }
+
+    $scope.removerUser = function (userId) {
+        UserService.remover(userId)
+
+
+        $scope.users = UserService.listar()
     }
     
     // $scope.usuario = {
