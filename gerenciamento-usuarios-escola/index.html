@@ -138,10 +138,11 @@
 
                         <div class="mb-3">
                             <label for="tipo-user" class="col-form-label fs-5">Tipo de Usuario:</label>
-                            <select id="tipo-user" class="form-select" ng-model="userInput.tipo" required >
-                                <!-- Perguntar
-                                <option ng-selected="select" disabled>Selecione:</option> -->
-                                <option value="Aluno" selected>Aluno</option>
+                            <select id="tipo-user" class="form-select" ng-model="userInput.tipo" required>
+                                
+                                <option value="" selected disabled>Selecione:</option> 
+                               
+                                <option value="Aluno">Aluno</option>
                                 <option value="Professor">Professor</option>
                             </select>
                         </div>
