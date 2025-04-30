@@ -79,13 +79,30 @@
                             Blog
                         </a>
                         <a href="./blog/previsao.html">
-                            Previsao
+                            Previsão
                         </a>
                         <a href="./bootstrap/">
                             Bootstrap
                         </a>
                         <a href="./tarefas/">
                             Tarefas (AngularJS)
+                        </a>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="btn dropdown">
+                    JS / Angular
+                    <div class="dropdown-content">
+                        <a href="./sistema-escolar/">
+                            Sistema Escolar
+                        </a>
+                        <a href="./automacao-luzes/">
+                            Automação Luzes
+                        </a>
+                        <a href="./gerenciamento-usuarios-escola/">
+                            Gerenciamento de Usuários
                         </a>
                     </div>
                 </div>
@@ -172,5 +189,18 @@
 
     <!-- JavaScript -->
     <script src="./assets/js/menu-mobile.js"></script>
+    <script>
+        document.querySelectorAll('.btn.dropdown').forEach((e) => {
+            e.addEventListener('click', () => {
+                console.log(e.querySelector('.dropdown-content'))
+                e.querySelector('.dropdown-content').classList.toggle('active')
+            })
+        })
+        //Para funcionar no wikipedia, cujo nao ia dentro do foreach nao sei porque
+        document.querySelector('.btn.dropdown').addEventListener('click', () => {
+            document.querySelector('.dropdown-content').classList.toggle('active')
+        })
+
+    </script>
 </body>
 </html>
