@@ -93,6 +93,7 @@
                     <tr>
                         <th>Cadastro</th>
                         <th>Nome</th>
+                        <th>Email</th>
                         <th>Tipo De Usuario</th>
                         <th>Deletar</th>
                     </tr>
@@ -101,6 +102,7 @@
                     <tr ng-repeat="user in filteredUsers()">
                         <td ng-bind="user.dataCadastro | date: 'dd/MM/yyyy'"></td>
                         <td ng-bind="user.nome | uppercase"></td>
+                        <td ng-bind="user.email"></td>
                         <td ng-bind="user.tipo"></td>
                         <td>
                             <button type="button" ng-click="removerUser(user.id)">
@@ -133,30 +135,72 @@
                   <h1 class="modal-title fs-3" id="exampleModalLabel">New message</h1>
                   <button type="button" class="btn-close" ng-click="toggleModal()" aria-label="Close"></button>
                 </div>
-                <form ng-submit="adicionarUser()">
+
+                <!-- Alerta de Sucesso -->
+                <div ng-show="successForm" class="alert alert-success d-flex align-items-center mx-2 mt-2" role="alert">
+                    <span class="me-3 material-symbols-outlined">
+                        check_circle
+                    </span>
+                    <div>
+                      Dados salvo com sucesso!
+                    </div>
+                </div>
+
+                <!-- Alerta de erro -->
+                <div ng-show="errorForm" class="alert alert-danger d-flex align-items-center mx-2 mt-2" role="alert">
+                    <span class="me-3 material-symbols-outlined">
+                        warning
+                    </span>
+                    <div>
+                      Insira corretamente os dados dentro do fomulário!
+                    </div>
+                </div>
+
+                <form name="form" ng-submit="adicionarUser()">
                     <div class="modal-body">
 
                         <div class="mb-3">
                             <label for="tipo-user" class="col-form-label fs-5">Tipo de Usuario:</label>
-                            <select id="tipo-user" class="form-select" ng-model="userInput.tipo" required>
+                            <select 
+                                id="tipo-user" name="tipo"
+                                class="form-select" ng-model="userInput.tipo" ng-required="true"
+                                ng-style="validate(form.tipo.$error, form.tipo.$touched)"
+                            >
                                 
                                 <option value="" selected disabled>Selecione:</option> 
-                               
                                 <option value="Aluno">Aluno</option>
                                 <option value="Professor">Professor</option>
                             </select>
                         </div>
                         <div class="mb-3">
                             <label for="nome" class="col-form-label fs-5">Nome:</label>
-                            <input class="form-control" name="nome" id="nome" ng-model="userInput.nome" required>
+                            <input 
+                                placeholder="Insira um nome" class="form-control" name="nome" id="nome" ng-model="userInput.nome" 
+                                type="text"
+                                ng-required="true"
+                                ng-style="validate(form.nome.$error, form.nome.$touched)"
+                            >
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="col-form-label fs-5">E-mail:</label>
+                            <input 
+                                placeholder="exemple@exemple.com" class="form-control" name="email" id="email" ng-model="userInput.email" 
+                                type="email"
+                                ng-required="true"
+                                ng-style="validate(form.email.$error, form.email.$touched)"
+                            >
                         </div>
 
                     </div>
+                    
                     <div class="modal-footer">
+                        <div ng-show="loading" class="spinner-grow text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
 
                         <button type="button" class="btn btn-secondary" ng-click="toggleModal()">Close</button>
 
-                        <button type="submit" class="btn btn-primary">Adicionar Usuario</button>
+                        <button type="submit" class="btn btn-primary" ng-disabled="!form.$valid || formDisabled">Adicionar Usuario</button>
 
                     </div>
                 </form>

@@ -83,7 +83,7 @@ app.controller("TaskController", function ($scope, $filter, TaskService) {
 
         const isTrue = values.reduce((acc, curr) => acc && curr, true)
         if(isTrue)
-                return { "border-color": "red" }
+            return { "border-color": "red" }
     }
 
 })
