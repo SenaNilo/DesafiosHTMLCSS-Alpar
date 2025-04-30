@@ -263,6 +263,11 @@ button{
     justify-content: center;
     text-align: center;
     margin-top: 0.8rem;
+    color: var(--dark-color);
+    transition: 0.3s
+}
+.modal .send:disabled{
+    opacity: 0.5;
 }
 
 .modal .close{
