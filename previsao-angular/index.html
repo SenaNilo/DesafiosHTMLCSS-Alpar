@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="weatherApp">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./assets/css/style.css'>
+
+    <!-- AngularJS - Link para poder utilizá-lo -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="WeatherController">
+    
+    <section class="card" ng-class="{'active': cardActive}">
+        <h1>{{cityName}}</h1>
+        <img
+            ng-if="iconUrl"
+            class="icon" src="{{iconUrl}}" alt="clouds">
+
+        <h2><span>{{ temperature }}</span>º</h2>
+        <p class="fells-like">Sensacao termica de  <span>{{fellsLike}}</span>º</p>
+        <div class="min-max">
+            <p>Min: <span class="min">{{minTemperature}}</span>º</p>
+            <p>Max: <span class="max">{{maxTemperature}}</span>º</p>
+        </div>
+
+        <p class="humidity">Humidade <span>{{humidity}}%</span></p>
+
+        <div class="wind">
+            <img 
+                ng-style="{'transform': 'rotate('+windOrientation+'deg)'}"
+                src="./assets/img/seta.png" alt="seta para representação da direção do vento" width="100px">
+            <p>
+                velocidade do vento: <span>{{windVelocity}}</span>m/s
+            </p>
+        </div>
+
+    </section>
+
+    <section class="input">
+        <input type="text" name="city" ng-model="city" placeholder="Busque uma cidade" id="">
+        <button type="button" ng-click="callApi()">Buscar</button>
+    </section>
+
+    <!-- <script src='./assets/js/previsao.js'></script> -->
+    <script src='./assets/js/main.js'></script>
+</body>
+</html>
